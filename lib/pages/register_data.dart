@@ -1,8 +1,20 @@
+import 'package:appturista/components/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class RegisterDataPage extends StatelessWidget {
+class RegisterDataPage extends StatefulWidget {
   const RegisterDataPage({Key? key}) : super(key: key);
+
+  @override
+  State<RegisterDataPage> createState() => _RegisterDataPageState();
+}
+
+class _RegisterDataPageState extends State<RegisterDataPage> {
+  final namesController = TextEditingController();
+  final lastNamesController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final repeatPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,98 +42,49 @@ class RegisterDataPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-            TextFormField(
-              decoration: const InputDecoration(
-                label: Text('oso'),
-                border: UnderlineInputBorder(),
-              ),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.9,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Row(
-                  children: [
-                    SvgPicture.asset(
-                      './assets/icons/email.svg',
-                      width: 28,
-                    ),
-                    const Expanded(
-                      child: Text(
-                        'Continuar con mi correo electrónico',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    )
-                  ],
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: const Color(0xFFC1C1C1),
-                ),
-              ),
+            CustomTextField(
+              controller: namesController,
+              label: 'Nombre',
             ),
             const SizedBox(height: 10),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.9,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Row(
-                  children: [
-                    SvgPicture.asset(
-                      './assets/icons/google.svg',
-                      height: 28,
-                    ),
-                    const Expanded(
-                      child: Text(
-                        'Continuar con Google',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    )
-                  ],
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                ),
-              ),
+            CustomTextField(
+              controller: lastNamesController,
+              label: 'Apellidos',
             ),
             const SizedBox(height: 10),
+            CustomTextField(
+              controller: emailController,
+              label: 'Correo electrónico',
+            ),
+            const SizedBox(height: 10),
+            CustomTextField(
+              controller: passwordController,
+              label: 'Contraseña',
+              type: 'password',
+            ),
+            const SizedBox(height: 10),
+            CustomTextField(
+              controller: repeatPasswordController,
+              label: 'Repita Contraseña',
+              type: 'password',
+            ),
+            const SizedBox(height: 30),
             SizedBox(
-              width: MediaQuery.of(context).size.width * 0.9,
+              width: MediaQuery.of(context).size.width * 0.8,
               height: 50,
               child: ElevatedButton(
                 onPressed: () {},
-                child: Row(
-                  children: [
-                    SvgPicture.asset(
-                      './assets/icons/facebook.svg',
-                      height: 28,
-                    ),
-                    const Expanded(
-                      child: Text(
-                        'Continuar con Facebook',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
+                child: const Text(
+                  'Iniciar',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: const Color(0xFF1B54CF),
+                  primary: const Color(0xFF1B8F26),
                 ),
               ),
             ),
-            const SizedBox(height: 60),
           ],
         ),
       ),

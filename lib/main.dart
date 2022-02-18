@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'App Turista',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: const LoginPage(),
     );

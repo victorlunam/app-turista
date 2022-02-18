@@ -60,7 +60,7 @@ class RegisterPage extends StatelessWidget {
                 ],
               ),
               style: ElevatedButton.styleFrom(
-                primary: const Color(0xFFC1C1C1),
+                primary: const Color(0xffC1C1C1),
               ),
             ),
           ),
