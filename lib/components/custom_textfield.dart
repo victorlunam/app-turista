@@ -7,11 +7,16 @@ class CustomTextField extends StatefulWidget {
     required this.controller,
     required this.label,
     this.type = 'text',
+    this.textInputType = TextInputType.text,
+    this.textInputAction = TextInputAction.done,
+    ValueChanged<String>? onFieldSubmitted,
   }) : super(key: key);
 
   final TextEditingController controller;
   final String label;
   final String type;
+  final TextInputType textInputType;
+  final TextInputAction textInputAction;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -27,9 +32,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       controller: widget.controller,
       obscureText: widget.type == 'text' ? false : _obscureText,
+      keyboardType: widget.textInputType,
+      textInputAction: widget.textInputAction,
       style: const TextStyle(
         fontSize: 18,
         color: Color(0xFF212121),
@@ -45,7 +52,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
               ),
         label: Text(
           widget.label,
-          style: const TextStyle(color: Color(0xFF212121)),
+          style: TextStyle(
+            color: widget.controller.text == ''
+                ? const Color(0xFF939393)
+                : const Color(0xFF212121),
+          ),
         ),
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: Color(0xFF1B8F26), width: 3),
@@ -53,9 +64,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
               color: widget.controller.text == ''
-                  ? Colors.grey
+                  ? const Color(0xFF939393)
                   : const Color(0xFF1B8F26),
-              width: 3),
+              width: 1),
         ),
       ),
     );

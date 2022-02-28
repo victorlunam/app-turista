@@ -1,16 +1,13 @@
-import 'package:appturista/pages/register_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
           icon: SvgPicture.asset('./assets/icons/backbutton.svg'),
@@ -33,14 +30,7 @@ class RegisterPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.9,
             height: 50,
             child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const RegisterDataPage(),
-                  ),
-                );
-              },
+              onPressed: () => Navigator.pushNamed(context, '/signUp/data'),
               child: Row(
                 children: [
                   SvgPicture.asset(

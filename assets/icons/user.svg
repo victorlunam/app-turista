@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M17.85,21a1.051,1.051,0,0,1-1.05-1.05v-2.1A3.154,3.154,0,0,0,13.65,14.7H5.25A3.154,3.154,0,0,0,2.1,17.85v2.1a1.05,1.05,0,0,1-2.1,0v-2.1A5.256,5.256,0,0,1,5.25,12.6h8.4a5.256,5.256,0,0,1,5.25,5.25v2.1A1.051,1.051,0,0,1,17.85,21ZM9.45,10.5A5.25,5.25,0,1,1,14.7,5.25,5.256,5.256,0,0,1,9.45,10.5Zm0-8.4A3.15,3.15,0,1,0,12.6,5.25,3.154,3.154,0,0,0,9.45,2.1Z" transform="translate(0 0)" fill="#242825"/>
+    </clipPath>
+    <filter id="_Icon_Color" x="-58.6" y="-41.1" width="145.2" height="145.2" filterUnits="userSpaceOnUse">
+      <feOffset dy="18" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_20822" data-name="Grupo 20822" transform="translate(-3640 2650)">
+    <g id="Icon_user" data-name="Icon / user" transform="translate(3644.55 -2647)">
+      <g id="Grupo_51" data-name="Grupo 51" transform="translate(0 0)">
+        <path id="Combined_Shape-2" data-name="Combined Shape" d="M17.85,21a1.051,1.051,0,0,1-1.05-1.05v-2.1A3.154,3.154,0,0,0,13.65,14.7H5.25A3.154,3.154,0,0,0,2.1,17.85v2.1a1.05,1.05,0,0,1-2.1,0v-2.1A5.256,5.256,0,0,1,5.25,12.6h8.4a5.256,5.256,0,0,1,5.25,5.25v2.1A1.051,1.051,0,0,1,17.85,21ZM9.45,10.5A5.25,5.25,0,1,1,14.7,5.25,5.256,5.256,0,0,1,9.45,10.5Zm0-8.4A3.15,3.15,0,1,0,12.6,5.25,3.154,3.154,0,0,0,9.45,2.1Z" transform="translate(0 0)" fill="#242825"/>
+        <g id="Enmascarar_grupo_51" data-name="Enmascarar grupo 51" clip-path="url(#clip-path)">
+          <g transform="matrix(1, 0, 0, 1, -4.55, -3)" filter="url(#_Icon_Color)">
+            <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="25.2" height="25.2" transform="translate(1.4 0.9)" fill="#242825"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectángulo_3590" data-name="Rectángulo 3590" width="28" height="28" transform="translate(3640 -2650)" fill="none"/>
+  </g>
+</svg>

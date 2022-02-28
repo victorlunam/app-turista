@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M3.222,18.778A11,11,0,1,1,18.778,3.222,11,11,0,1,1,3.222,18.778ZM2,11a9,9,0,1,0,9-9A9.01,9.01,0,0,0,2,11Zm6,4V7a1,1,0,0,1,1.554-.832l6,4a1,1,0,0,1,0,1.664l-6,4A.989.989,0,0,1,9,16,1,1,0,0,1,8,15Z" transform="translate(1 1)" fill="#939393"/>
+    </clipPath>
+    <filter id="_Icon_Color" x="-58" y="-40.5" width="144" height="144" filterUnits="userSpaceOnUse">
+      <feOffset dy="18" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_20710" data-name="Grupo 20710" transform="translate(-3392 2085)">
+    <g id="Icon_play-circle" data-name="Icon / play-circle" transform="translate(3395 -2082.5)">
+      <g id="Grupo_132" data-name="Grupo 132" transform="translate(-1 -1)">
+        <path id="Combined_Shape-2" data-name="Combined Shape" d="M3.222,18.778A11,11,0,1,1,18.778,3.222,11,11,0,1,1,3.222,18.778ZM2,11a9,9,0,1,0,9-9A9.01,9.01,0,0,0,2,11Zm6,4V7a1,1,0,0,1,1.554-.832l6,4a1,1,0,0,1,0,1.664l-6,4A.989.989,0,0,1,9,16,1,1,0,0,1,8,15Z" transform="translate(1 1)" fill="#939393"/>
+        <g id="Enmascarar_grupo_132" data-name="Enmascarar grupo 132" clip-path="url(#clip-path)">
+          <g transform="matrix(1, 0, 0, 1, -2, -1.5)" filter="url(#_Icon_Color)">
+            <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="24" height="24" transform="translate(2 1.5)" fill="#939393"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectángulo_3594" data-name="Rectángulo 3594" width="28" height="28" transform="translate(3392 -2085)" fill="none"/>
+  </g>
+</svg>

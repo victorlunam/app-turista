@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="MDI_share-all" data-name="MDI / share-all" transform="translate(-86 -547)">
+    <g id="Boundary" transform="translate(86 547)" fill="#b1b1b1" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0">
+      <rect width="25" height="25" stroke="none"/>
+      <rect x="0.5" y="0.5" width="24" height="24" fill="none"/>
+    </g>
+    <path id="Icon_ionic-ios-share-alt" data-name="Icon ionic-ios-share-alt" d="M25.662,14.221,17.819,6.883a.4.4,0,0,0-.311-.133c-.245.011-.556.183-.556.445v3.68a.238.238,0,0,1-.2.228c-7.8,1.2-11.084,7.032-12.246,13.091-.044.239.278.461.428.272C7.78,20.88,11.243,18.54,16.718,18.5a.275.275,0,0,1,.233.267v3.613a.477.477,0,0,0,.806.295l7.9-7.465a.614.614,0,0,0,.195-.467A.745.745,0,0,0,25.662,14.221Z" transform="translate(83.324 543.857)" fill="#b8b8b8"/>
+  </g>
+</svg>

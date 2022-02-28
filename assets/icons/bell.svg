@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M10.5,21a2.872,2.872,0,0,1-2.477-1.427.955.955,0,0,1,.826-1.434h3.3a.955.955,0,0,1,.827,1.434A2.875,2.875,0,0,1,10.5,21Zm9.547-4.77H.954a.955.955,0,0,1,0-1.909,1.912,1.912,0,0,0,1.909-1.91V7.638a7.638,7.638,0,0,1,15.275,0V12.41a1.912,1.912,0,0,0,1.909,1.91.915.915,0,0,1,.955.955.982.982,0,0,1-.239.656A.926.926,0,0,1,20.048,16.23ZM10.5,1.909A5.734,5.734,0,0,0,4.774,7.638V12.41a3.821,3.821,0,0,1-.511,1.91H16.74a3.822,3.822,0,0,1-.51-1.91V7.638A5.735,5.735,0,0,0,10.5,1.909Z" transform="translate(0 0)" fill="#242825"/>
+    </clipPath>
+    <filter id="_Icon_Color" x="-56.958" y="-39.955" width="142.912" height="142.912" filterUnits="userSpaceOnUse">
+      <feOffset dy="18" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_20703" data-name="Grupo 20703" transform="translate(-3545 2650)">
+    <g id="Icon_bell" data-name="Icon / bell" transform="translate(3548.997 -2647)">
+      <g id="Grupo_140" data-name="Grupo 140" transform="translate(0 0)">
+        <path id="Shape-2" data-name="Shape" d="M5.085,1.434A2.864,2.864,0,0,1,2.608,2.861,2.864,2.864,0,0,1,.13,1.434.955.955,0,0,1,.956,0h3.3A.955.955,0,0,1,5.085,1.434Z" transform="translate(7.894 18.139)" fill="#242825"/>
+        <g id="Enmascarar_grupo_140" data-name="Enmascarar grupo 140" clip-path="url(#clip-path)">
+          <g transform="matrix(1, 0, 0, 1, -4, -3)" filter="url(#_Icon_Color)">
+            <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="22.912" height="22.912" transform="translate(3.04 2.05)" fill="#242825"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectángulo_3592" data-name="Rectángulo 3592" width="28" height="28" transform="translate(3545 -2650)" fill="none"/>
+  </g>
+</svg>

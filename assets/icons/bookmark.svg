@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M15,20a.989.989,0,0,1-.578-.188L8,15.229,1.581,19.814A.989.989,0,0,1,1,20a1.022,1.022,0,0,1-.7-.279A.986.986,0,0,1,0,19V3A3,3,0,0,1,3,0H13a3,3,0,0,1,3,3V19A1,1,0,0,1,15,20ZM8,13a1,1,0,0,1,.582.186L14,17.057V3a1,1,0,0,0-1-1H3A1,1,0,0,0,2,3V17.057l5.419-3.871A.993.993,0,0,1,8,13Z" transform="translate(4 2)" fill="#222423"/>
+    </clipPath>
+    <filter id="_Icon_Color" x="-58" y="-40" width="144" height="144" filterUnits="userSpaceOnUse">
+      <feOffset dy="18" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_20890" data-name="Grupo 20890" transform="translate(2681 4534)">
+    <g id="Icon_bookmark" data-name="Icon / bookmark" transform="translate(-2675 -4530)">
+      <g id="Grupo_170" data-name="Grupo 170" transform="translate(-4 -2)">
+        <g id="Enmascarar_grupo_170" data-name="Enmascarar grupo 170" clip-path="url(#clip-path)">
+          <g transform="matrix(1, 0, 0, 1, -2, -2)" filter="url(#_Icon_Color)">
+            <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="24" height="24" transform="translate(2 2)" fill="#222423"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectángulo_3643" data-name="Rectángulo 3643" width="28" height="28" transform="translate(-2681 -4534)" fill="none"/>
+  </g>
+</svg>

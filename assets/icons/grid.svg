@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M19,20H12a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1v7A1,1,0,0,1,19,20Zm-6-7v5h5V13ZM8,20H1a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1H8a1,1,0,0,1,1,1v7A1,1,0,0,1,8,20ZM2,13v5H7V13ZM19,9H12a1,1,0,0,1-1-1V1a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1V8A1,1,0,0,1,19,9ZM13,2V7h5V2ZM8,9H1A1,1,0,0,1,0,8V1A1,1,0,0,1,1,0H8A1,1,0,0,1,9,1V8A1,1,0,0,1,8,9ZM2,2V7H7V2Z" transform="translate(2 2)" fill="#222423"/>
+    </clipPath>
+    <filter id="_Icon_Color" x="-58" y="-40" width="144" height="144" filterUnits="userSpaceOnUse">
+      <feOffset dy="18" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_20779" data-name="Grupo 20779" transform="translate(2443 4625)">
+    <g id="Icon_grid" data-name="Icon / grid" transform="translate(-2439 -4621)">
+      <g id="Grupo_157" data-name="Grupo 157" transform="translate(-2 -2)">
+        <path id="Combined_Shape-2" data-name="Combined Shape" d="M12,20a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1v7a1,1,0,0,1-1,1Zm1-2h5V13H13ZM1,20a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1H8a1,1,0,0,1,1,1v7a1,1,0,0,1-1,1Zm1-2H7V13H2ZM12,9a1,1,0,0,1-1-1V1a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1V8a1,1,0,0,1-1,1Zm1-2h5V2H13ZM1,9A1,1,0,0,1,0,8V1A1,1,0,0,1,1,0H8A1,1,0,0,1,9,1V8A1,1,0,0,1,8,9Z" transform="translate(2 2)" fill="none"/>
+        <g id="Enmascarar_grupo_157" data-name="Enmascarar grupo 157" clip-path="url(#clip-path)">
+          <g transform="matrix(1, 0, 0, 1, -2, -2)" filter="url(#_Icon_Color)">
+            <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="24" height="24" transform="translate(2 2)" fill="#222423"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectángulo_3619" data-name="Rectángulo 3619" width="28" height="28" transform="translate(-2443 -4625)" fill="none"/>
+  </g>
+</svg>

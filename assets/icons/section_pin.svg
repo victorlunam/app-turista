@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+  <g id="Grupo_2078" data-name="Grupo 2078" transform="translate(-10 -285)">
+    <circle id="Elipse_139" data-name="Elipse 139" cx="16.5" cy="16.5" r="16.5" transform="translate(10 285)" fill="#f1f1f1"/>
+    <g id="MDI_map-marker" data-name="MDI / map-marker" transform="translate(16.165 292.165)">
+      <g id="Boundary" transform="translate(0.835 0.835)" fill="#5e5e5c" stroke="#222423" stroke-width="1" opacity="0">
+        <rect width="19" height="19" stroke="none"/>
+        <rect x="0.5" y="0.5" width="18" height="18" fill="none"/>
+      </g>
+      <path id="Path_map-marker" data-name="Path / map-marker" d="M10.737,9.786a2.049,2.049,0,1,1,2.049-2.049,2.049,2.049,0,0,1-2.049,2.049m0-7.786A5.737,5.737,0,0,0,5,7.737c0,4.3,5.737,10.655,5.737,10.655s5.737-6.352,5.737-10.655A5.737,5.737,0,0,0,10.737,2Z" transform="translate(-0.83 -0.288)" fill="none" stroke="#222423" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

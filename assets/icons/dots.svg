@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="MDI_dots-vertical" data-name="MDI / dots-vertical" transform="translate(0 24) rotate(-90)">
+    <g id="Boundary" fill="#939393" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0">
+      <rect width="24" height="24" stroke="none"/>
+      <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
+    </g>
+    <path id="Path_dots-vertical" data-name="Path / dots-vertical" d="M12.013,16.08A2.013,2.013,0,1,1,10,18.093a2.013,2.013,0,0,1,2.013-2.013m0-6.04A2.013,2.013,0,1,1,10,12.053a2.013,2.013,0,0,1,2.013-2.013m0-6.04A2.013,2.013,0,1,1,10,6.013,2.013,2.013,0,0,1,12.013,4Z" transform="translate(-0.013 -0.053)" fill="#939393"/>
+  </g>
+</svg>

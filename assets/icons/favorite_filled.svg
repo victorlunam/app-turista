@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-378 -57)">
+    <rect id="Rectángulo_8" data-name="Rectángulo 8" width="30" height="30" transform="translate(378 57)" fill="none"/>
+    <path id="Icon_awesome-heart" data-name="Icon awesome-heart" d="M19.864,3.564a5.876,5.876,0,0,0-8.018.584L11,5.021l-.846-.872a5.876,5.876,0,0,0-8.018-.584A6.17,6.17,0,0,0,1.71,12.5l8.314,8.585a1.347,1.347,0,0,0,1.946,0L20.285,12.5a6.166,6.166,0,0,0-.421-8.933Z" transform="translate(382.443 60.553)" fill="none"/>
+    <path id="Icon_material-favorite" data-name="Icon material-favorite" d="M18,32.025l-2.175-1.98C8.1,23.04,3,18.42,3,12.75A8.17,8.17,0,0,1,11.25,4.5,8.983,8.983,0,0,1,18,7.635,8.983,8.983,0,0,1,24.75,4.5,8.17,8.17,0,0,1,33,12.75c0,5.67-5.1,10.29-12.825,17.31Z" transform="translate(375 53.738)" fill="#fff"/>
+  </g>
+</svg>
