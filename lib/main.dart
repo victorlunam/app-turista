@@ -1,12 +1,19 @@
-import 'dart:ui';
-
+import 'package:appturista/models/user.dart';
+import 'package:appturista/pages/about.dart';
 import 'package:appturista/pages/home.dart';
 import 'package:appturista/pages/profile.dart';
+import 'package:appturista/pages/profile_edit.dart';
+import 'package:appturista/pages/profile_followers_and_followings.dart';
 import 'package:appturista/pages/profile_moments_full.dart';
 import 'package:appturista/pages/profile_reels_full.dart';
+import 'package:appturista/pages/profile_settings_account_data.dart';
+import 'package:appturista/pages/profile_settings_personal_information.dart';
 import 'package:appturista/pages/recover.dart';
 import 'package:appturista/pages/recover_enter_code.dart';
 import 'package:appturista/pages/recover_shipping_notification.dart';
+import 'package:appturista/pages/profile_settings.dart';
+import 'package:appturista/pages/settings_frequent_questions.dart';
+import 'package:appturista/pages/settings_notifications.dart';
 import 'package:appturista/pages/sign_in.dart';
 import 'package:appturista/pages/sign_up.dart';
 import 'package:appturista/pages/sign_up_data.dart';
@@ -55,22 +62,44 @@ class MyApp extends StatelessWidget {
         ),
       ),
       initialRoute: '/',
-      routes: {
-        '/': (context) => const RootPage(),
-        '/signIn': (context) => const SignInPage(),
-        '/signUp': (context) => const SignUpPage(),
-        '/signUp/data': (context) => const SignUpDataPage(),
-        '/signUp/preferences': (context) => const SignUpPreferencesPage(),
-        '/recover': (context) => const RecoverPage(),
-        '/recover/shippingNotification': (context) =>
-            const RecoverShippingNotificationPage(),
-        '/recover/enterCode': (context) => const RecoverEnterCode(),
-        '/recover/updatePassword': (context) =>
-            const RecoverUpdatePasswordPage(),
-        '/home': (context) => const HomePage(),
-        '/profile': (context) => const ProfilePage(),
-        '/profile/view/moments': (context) => const ProfileMomentsFull(),
-        '/profile/view/reels': (context) => const ProfileReelsFull(),
+      onGenerateRoute: (settings) {
+        var routes = <String, WidgetBuilder>{
+          '/': (context) => const RootPage(),
+          '/signIn': (context) => const SignInPage(),
+          '/signUp': (context) => const SignUpPage(),
+          '/signUp/data': (context) => const SignUpDataPage(),
+          '/signUp/preferences': (context) => const SignUpPreferencesPage(),
+          '/recover': (context) => const RecoverPage(),
+          '/recover/shippingNotification': (context) =>
+              const RecoverShippingNotificationPage(),
+          '/recover/enterCode': (context) => const RecoverEnterCode(),
+          '/recover/updatePassword': (context) =>
+              const RecoverUpdatePasswordPage(),
+          '/home': (context) => const HomePage(),
+          '/profile': (context) => const ProfilePage(),
+          '/profile/edit': (context) {
+            final user = settings.arguments;
+            return ProfileEdit(user: user as User);
+          },
+          '/profile/settings': (context) => const ProfileSettingsPage(),
+          '/profile/settings/accountData': (context) =>
+              const ProfileSettingsAccountData(),
+          '/profile/settings/personalInformation': (context) =>
+              const ProfileSettingsPersonalInformation(),
+          '/profile/followersAndFollowings': (context) {
+            final indexTab = settings.arguments;
+            return ProfileFollowersAndFollowingsPage(indexTab: indexTab as int);
+          },
+          '/profile/view/moments': (context) => const ProfileMomentsFull(),
+          '/profile/view/reels': (context) => const ProfileReelsFull(),
+          '/about': (context) => const AboutPage(),
+          '/settings/frequentQuestions': (context) =>
+              const SettingsFrequentQuestionsPage(),
+          '/settings/notifications': (context) =>
+              const SettingsNotificationsPage(),
+        };
+        WidgetBuilder? builder = routes[settings.name];
+        return MaterialPageRoute(builder: (ctx) => builder!(ctx));
       },
     );
   }

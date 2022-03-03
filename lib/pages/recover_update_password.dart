@@ -99,24 +99,25 @@ class _RecoverUpdatePasswordPageState extends State<RecoverUpdatePasswordPage> {
                 type: 'password',
               ),
               Expanded(
-                  child: Center(
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  height: 50,
-                  child: ElevatedButton(
-                    onPressed: openAlertBox,
-                    child: const Text(
-                      'Actualizar',
-                      style: TextStyle(
-                        fontSize: 16,
+                child: Center(
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 50,
+                    child: ElevatedButton(
+                      onPressed: openAlertBox,
+                      child: const Text(
+                        'Actualizar',
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
                       ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: const Color(0xFF1B8F26),
+                      style: ElevatedButton.styleFrom(
+                        primary: const Color(0xFF1B8F26),
+                      ),
                     ),
                   ),
                 ),
-              )),
+              ),
             ],
           ),
         ),

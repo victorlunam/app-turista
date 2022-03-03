@@ -19,6 +19,8 @@ class ProfileReels extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      physics: const BouncingScrollPhysics(),
+      shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         mainAxisSpacing: globalSpacing / 5,
         crossAxisSpacing: globalSpacing / 5,
