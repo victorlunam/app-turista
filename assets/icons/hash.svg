@@ -1,0 +1,22 @@
+<svg id="Icon_hash" data-name="Icon / hash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="21" viewBox="0 0 19 21">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M11.5,20.994a1.052,1.052,0,0,1-.933-1.159l.573-5.134H6.926l-.6,5.366a1.056,1.056,0,0,1-2.1-.232L4.8,14.7H1.055a1.05,1.05,0,1,1,0-2.1H5.037l.469-4.2H1.055a1.05,1.05,0,1,1,0-2.1H5.74l.6-5.366a1.056,1.056,0,0,1,2.1.232L7.864,6.3h4.209l.6-5.366a1.056,1.056,0,0,1,2.1.232L14.2,6.3h3.746a1.05,1.05,0,1,1,0,2.1H13.964l-.469,4.2h4.45a1.05,1.05,0,1,1,0,2.1H13.26l-.6,5.366A1.055,1.055,0,0,1,11.612,21,1.073,1.073,0,0,1,11.5,20.994ZM11.37,12.6l.469-4.2H7.63l-.469,4.2Z" fill="#222423"/>
+    </clipPath>
+    <filter id="_Icon_Color" x="-63.167" y="-44.1" width="145.333" height="145.199" filterUnits="userSpaceOnUse">
+      <feOffset dy="18" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_166" data-name="Grupo 166" transform="translate(0 0)">
+    <path id="Combined_Shape-2" data-name="Combined Shape" d="M11.5,20.994a1.052,1.052,0,0,1-.933-1.159l.573-5.134H6.926l-.6,5.366a1.056,1.056,0,0,1-2.1-.232L4.8,14.7H1.055a1.05,1.05,0,1,1,0-2.1H5.037l.469-4.2H1.055a1.05,1.05,0,1,1,0-2.1H5.74l.6-5.366a1.056,1.056,0,0,1,2.1.232L7.864,6.3h4.209l.6-5.366a1.056,1.056,0,0,1,2.1.232L14.2,6.3h3.746a1.05,1.05,0,1,1,0,2.1H13.964l-.469,4.2h4.45a1.05,1.05,0,1,1,0,2.1H13.26l-.6,5.366A1.055,1.055,0,0,1,11.612,21,1.073,1.073,0,0,1,11.5,20.994ZM11.37,12.6l.469-4.2H7.63l-.469,4.2Z" fill="#222423"/>
+    <g id="Enmascarar_grupo_166" data-name="Enmascarar grupo 166" clip-path="url(#clip-path)">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_Icon_Color)">
+        <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="25.333" height="25.199" transform="translate(-3.17 -2.1)" fill="#222423"/>
+      </g>
+    </g>
+  </g>
+</svg>

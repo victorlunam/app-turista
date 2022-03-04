@@ -109,7 +109,6 @@ class _ProfileFollowersAndFollowingsPageState
                               hintText: 'Buscar',
                               hintStyle: const TextStyle(
                                 color: Color(0xff939393),
-                                fontWeight: FontWeight.normal,
                               ),
                               contentPadding:
                                   const EdgeInsets.fromLTRB(10, 0, 0, 0),

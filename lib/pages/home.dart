@@ -13,15 +13,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool _visibilityBadge = false;
+  final bool _visibilityBadge = false;
 
   late final List<Widget> actions = [
     IconButton(
-      onPressed: () {
-        setState(() {
-          _visibilityBadge = !_visibilityBadge;
-        });
-      },
+      onPressed: () => Navigator.pushNamed(context, '/notifications'),
       icon: Badge(
         badgeContent: Text(
           countNotification.toString(),
@@ -36,7 +32,7 @@ class _HomePageState extends State<HomePage> {
       ),
     ),
     IconButton(
-      onPressed: () {},
+      onPressed: () => Navigator.pushNamed(context, '/search'),
       icon: SvgPicture.asset('./assets/icons/search.svg'),
     ),
     IconButton(

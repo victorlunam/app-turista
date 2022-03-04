@@ -1,6 +1,9 @@
 import 'package:appturista/models/user.dart';
 import 'package:appturista/pages/about.dart';
+import 'package:appturista/pages/comments.dart';
 import 'package:appturista/pages/home.dart';
+import 'package:appturista/pages/notifications.dart';
+import 'package:appturista/pages/notifications_liked.dart';
 import 'package:appturista/pages/profile.dart';
 import 'package:appturista/pages/profile_edit.dart';
 import 'package:appturista/pages/profile_followers_and_followings.dart';
@@ -12,6 +15,8 @@ import 'package:appturista/pages/recover.dart';
 import 'package:appturista/pages/recover_enter_code.dart';
 import 'package:appturista/pages/recover_shipping_notification.dart';
 import 'package:appturista/pages/profile_settings.dart';
+import 'package:appturista/pages/search.dart';
+import 'package:appturista/pages/search_view.dart';
 import 'package:appturista/pages/settings_frequent_questions.dart';
 import 'package:appturista/pages/settings_notifications.dart';
 import 'package:appturista/pages/sign_in.dart';
@@ -76,6 +81,14 @@ class MyApp extends StatelessWidget {
           '/recover/updatePassword': (context) =>
               const RecoverUpdatePasswordPage(),
           '/home': (context) => const HomePage(),
+          '/search': (context) => const SearchPage(),
+          '/search/view': (context) {
+            final title = settings.arguments;
+            return SearchViewPage(title: title as String);
+          },
+          '/notifications': (context) => const NotificationsPage(),
+          '/notifications/liked': (context) => const NotificationsLikedPage(),
+          '/comments': (context) => const CommentsPage(),
           '/profile': (context) => const ProfilePage(),
           '/profile/edit': (context) {
             final user = settings.arguments;
