@@ -62,6 +62,7 @@ class _SignInPageState extends State<SignInPage> {
                     context,
                     '/home',
                     (Route<dynamic> route) => false,
+                    arguments: 0,
                   ),
                   child: const Text(
                     'Ingresar',

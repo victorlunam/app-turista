@@ -1,0 +1,21 @@
+<svg id="Icon_edit-2" data-name="Icon / edit-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M6.3,21H1.05A1.051,1.051,0,0,1,0,19.95V14.7a1.057,1.057,0,0,1,.307-.743L13.958.307a1.051,1.051,0,0,1,1.485,0l5.251,5.251a1.051,1.051,0,0,1,0,1.485L7.042,20.693A1.056,1.056,0,0,1,6.3,21ZM14.7,2.534h0L2.1,15.135V18.9H5.865l12.6-12.6L14.7,2.534Z" fill="#242825"/>
+    </clipPath>
+    <filter id="_Icon_Color" x="-62.1" y="-44.1" width="145.2" height="145.201" filterUnits="userSpaceOnUse">
+      <feOffset dy="18" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_161" data-name="Grupo 161">
+    <g id="Enmascarar_grupo_161" data-name="Enmascarar grupo 161" clip-path="url(#clip-path)">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_Icon_Color)">
+        <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="25.2" height="25.201" transform="translate(-2.1 -2.1)" fill="#242825"/>
+      </g>
+    </g>
+  </g>
+</svg>

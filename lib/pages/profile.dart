@@ -10,8 +10,18 @@ import 'package:appturista/utils/global_variables.dart';
 
 int countNotification = 2;
 
+class ProfilePageArguments {
+  final bool isOwner;
+  ProfilePageArguments({this.isOwner = false});
+}
+
 class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  const ProfilePage({
+    Key? key,
+    this.isOwner = false,
+  }) : super(key: key);
+
+  final bool isOwner;
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -20,7 +30,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage>
     with SingleTickerProviderStateMixin {
   late final TabController _tabController =
-      TabController(length: 4, vsync: this);
+      TabController(length: widget.isOwner ? 4 : 2, vsync: this);
   int _indexTabBar = 0;
 
   final User user = User(
@@ -88,6 +98,107 @@ class _ProfilePageState extends State<ProfilePage>
       label: 'Mensajes',
     ),
   ];
+
+  late final tabBarTabs = [
+    Tab(
+      icon: SvgPicture.asset(
+        './assets/icons/grid.svg',
+        color: _indexTabBar != 0 ? const Color(0xFF939393) : Colors.black,
+      ),
+    ),
+    Tab(
+      icon: SvgPicture.asset(
+        './assets/icons/play.svg',
+        color: _indexTabBar != 1 ? const Color(0xFF939393) : Colors.black,
+      ),
+    ),
+    Tab(
+      icon: SvgPicture.asset(
+        './assets/icons/bookmark.svg',
+        color: _indexTabBar != 2 ? const Color(0xFF939393) : Colors.black,
+      ),
+    ),
+    Tab(
+      icon: SvgPicture.asset(
+        './assets/icons/look.svg',
+        color: _indexTabBar != 3 ? const Color(0xFF939393) : Colors.black,
+      ),
+    ),
+  ];
+
+  late final tabBarViews = const [
+    ProfileMoments(),
+    ProfileReels(),
+    ProfileFavorites(),
+    ProfilePrivate(),
+  ];
+
+  openAlertBox() => showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext ctx) {
+          double width = MediaQuery.of(context).size.width;
+
+          return AlertDialog(
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            contentPadding: EdgeInsets.zero,
+            insetPadding: const EdgeInsets.all(globalSpacing),
+            content: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  width: width,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius:
+                        BorderRadius.all(Radius.circular(globalBorderRadius)),
+                  ),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: globalSpacing),
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                          user.photo,
+                        ),
+                      ),
+                      const SizedBox(height: globalSpacing * 2),
+                      Text(user.username),
+                      const SizedBox(height: globalSpacing * 2),
+                      const Divider(
+                        color: Color(0xFFF1F1F1),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text('Dejar de seguir'),
+                        style: TextButton.styleFrom(
+                          primary: const Color(0xFFFF2953),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(height: globalSpacing),
+                Container(
+                  width: width,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius:
+                        BorderRadius.all(Radius.circular(globalBorderRadius)),
+                  ),
+                  child: TextButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text('Cancelar'),
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                    ),
+                  ),
+                )
+              ],
+            ),
+          );
+        },
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -167,26 +278,72 @@ class _ProfilePageState extends State<ProfilePage>
                       ),
                     ),
                     const SizedBox(height: globalSpacing),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      height: 40,
-                      child: ElevatedButton(
-                        onPressed: () => Navigator.pushNamed(
-                          context,
-                          '/profile/edit',
-                          arguments: user,
-                        ),
-                        child: const Text(
-                          'Editar Perfil',
-                          style: TextStyle(
-                            fontSize: 16,
+                    widget.isOwner
+                        ? SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.4,
+                            height: 40,
+                            child: ElevatedButton(
+                              onPressed: () => Navigator.pushNamed(
+                                context,
+                                '/profile/edit',
+                                arguments: user,
+                              ),
+                              child: const Text(
+                                'Editar Perfil',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                primary: const Color(0xFF1B8F26),
+                              ),
+                            ),
+                          )
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                height: 40,
+                                width: 120,
+                                child: OutlinedButton(
+                                  onPressed: openAlertBox,
+                                  child: const Text(
+                                    'Siguiendo',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  style: OutlinedButton.styleFrom(
+                                    primary: const Color(0xFF222423),
+                                    side: const BorderSide(
+                                      color: Color(0x93939380),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: globalSpacing),
+                              SizedBox(
+                                height: 40,
+                                width: 120,
+                                child: ElevatedButton(
+                                  onPressed: () => Navigator.pushNamed(
+                                    context,
+                                    '/chat',
+                                    arguments: user,
+                                  ),
+                                  child: const Text(
+                                    'Mensaje',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                    primary: const Color(0xFF1B8F26),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          primary: const Color(0xFF1B8F26),
-                        ),
-                      ),
-                    ),
                     const SizedBox(height: globalSpacing),
                   ],
                 ),
@@ -201,51 +358,17 @@ class _ProfilePageState extends State<ProfilePage>
                     onTap: (index) => setState(() {
                       _indexTabBar = index;
                     }),
-                    tabs: [
-                      Tab(
-                        icon: SvgPicture.asset(
-                          './assets/icons/grid.svg',
-                          color: _indexTabBar != 0
-                              ? const Color(0xFF939393)
-                              : Colors.black,
-                        ),
-                      ),
-                      Tab(
-                        icon: SvgPicture.asset(
-                          './assets/icons/play.svg',
-                          color: _indexTabBar != 1
-                              ? const Color(0xFF939393)
-                              : Colors.black,
-                        ),
-                      ),
-                      Tab(
-                        icon: SvgPicture.asset(
-                          './assets/icons/bookmark.svg',
-                          color: _indexTabBar != 2
-                              ? const Color(0xFF939393)
-                              : Colors.black,
-                        ),
-                      ),
-                      Tab(
-                        icon: SvgPicture.asset(
-                          './assets/icons/look.svg',
-                          color: _indexTabBar != 3
-                              ? const Color(0xFF939393)
-                              : Colors.black,
-                        ),
-                      ),
-                    ],
+                    tabs:
+                        widget.isOwner ? tabBarTabs : tabBarTabs.sublist(0, 2),
                   ),
                 ),
               ),
             ];
           },
-          body: TabBarView(controller: _tabController, children: const [
-            ProfileMoments(),
-            ProfileReels(),
-            ProfileFavorites(),
-            ProfilePrivate(),
-          ]),
+          body: TabBarView(
+            controller: _tabController,
+            children: widget.isOwner ? tabBarViews : tabBarViews.sublist(0, 2),
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

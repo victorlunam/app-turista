@@ -45,7 +45,11 @@ class _SignUpPreferencesPageState extends State<SignUpPreferencesPage> {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () => Navigator.pushNamed(context, '/home'),
+            onPressed: () => Navigator.pushNamed(
+              context,
+              '/home',
+              arguments: 0,
+            ),
             icon: SvgPicture.asset('./assets/icons/close.svg'),
           ),
         ],
