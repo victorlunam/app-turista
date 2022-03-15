@@ -1,12 +1,25 @@
 import 'dart:io';
 
+import 'package:appturista/models/user.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class CameraViewPage extends StatelessWidget {
-  const CameraViewPage({Key? key, required this.path}) : super(key: key);
+class CameraPageViewArguments {
+  final User? user;
+  final String path;
 
+  const CameraPageViewArguments(
+    this.path, {
+    this.user,
+  });
+}
+
+class CameraViewPage extends StatelessWidget {
+  const CameraViewPage({Key? key, required this.path, this.user})
+      : super(key: key);
+
+  final User? user;
   final String path;
 
   @override
@@ -46,13 +59,32 @@ class CameraViewPage extends StatelessWidget {
                     '/moment/create',
                     arguments: path,
                   ),
-                  child: const Text(
-                    'Siguiente',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                    ),
-                  ),
+                  child: user == null
+                      ? const Text(
+                          'Siguiente',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
+                        )
+                      : Row(
+                          children: const [
+                            CircleAvatar(
+                              maxRadius: 15,
+                              backgroundImage: AssetImage(
+                                './assets/images/users/user_1.png',
+                              ),
+                            ),
+                            SizedBox(width: globalSpacing),
+                            Text(
+                              'Enviar',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                   ),

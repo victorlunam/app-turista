@@ -81,7 +81,6 @@ class _ImagePickerViewState extends State<ImagePickerView>
     photoProvider = Provider.of<PhotoProvider>(context, listen: false);
     provider = Provider.of<PhotoProvider>(context, listen: false)
         .getOrCreatePathProvider(path);
-    print('Dependencies changeing');
   }
 
   @override
@@ -108,7 +107,6 @@ class _ImagePickerViewState extends State<ImagePickerView>
   Widget buildRefreshIndicator(int length) {
     if (!provider!.isInit) {
       provider!.onRefresh();
-      print('object');
       return const Center(
         child: CircularProgressIndicator(),
       );
@@ -206,10 +204,10 @@ class _ImagePickerViewState extends State<ImagePickerView>
     await provider!.onLoadMore();
   }
 
-  Future<void> _onRefresh() async {
+  /* Future<void> _onRefresh() async {
     if (!mounted) {
       return;
     }
     await provider!.onRefresh();
-  }
+  } */
 }

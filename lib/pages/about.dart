@@ -92,7 +92,7 @@ class AboutPage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, '/signIn'),
+                  onPressed: () => Navigator.pushNamed(context, '/login'),
                   child: const Text(
                     'Califícanos en Play Store',
                     style: TextStyle(

@@ -3,21 +3,26 @@ import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-List<Map<String, dynamic>> chats = [
-  {"isOwner": false, "message": "Hola, como estas?"},
-  {"isOwner": false, "message": "vi tus fotos estan geniales"},
-  {"isOwner": true, "message": "Hola, Jim?"},
-  {
-    "isOwner": true,
-    "message":
-        "Muchas gracias?ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
-  }
-];
-
-class ChatPage extends StatelessWidget {
+class ChatPage extends StatefulWidget {
   const ChatPage(this.user, {Key? key}) : super(key: key);
 
   final User user;
+
+  @override
+  State<ChatPage> createState() => _ChatPageState();
+}
+
+class _ChatPageState extends State<ChatPage> {
+  List<Map<String, dynamic>> chats = [
+    {"isOwner": false, "message": "Hola, como estas?"},
+    {"isOwner": false, "message": "vi tus fotos estan geniales"},
+    {"isOwner": true, "message": "Hola, Jim?"},
+    {
+      "isOwner": true,
+      "message":
+          "Esto realmente es un texto muy largo, muy; muy largo. tan largo que te cansaras de leerlo, asi que no lo leas."
+    }
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +32,10 @@ class ChatPage extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
           icon: SvgPicture.asset('./assets/icons/backbutton.svg'),
         ),
-        title: chatHeader(user),
+        title: chatHeader(widget.user),
       ),
       body: builderMessage(context, chats),
-      bottomNavigationBar: chatInputBottom(context),
+      bottomNavigationBar: chatInputBottom(context, user: widget.user),
     );
   }
 }
@@ -66,7 +71,7 @@ Widget chatHeader(User user) {
   );
 }
 
-Widget chatInputBottom(BuildContext context) {
+Widget chatInputBottom(BuildContext context, {User? user}) {
   double marginBottom = MediaQuery.of(context).viewInsets.bottom;
   return SafeArea(
     child: Container(
@@ -85,7 +90,8 @@ Widget chatInputBottom(BuildContext context) {
       child: Row(
         children: [
           InkWell(
-            onTap: () {},
+            onTap: () =>
+                Navigator.pushNamed(context, '/camera', arguments: user),
             child: SvgPicture.asset('./assets/icons/camera.svg'),
           ),
           const SizedBox(width: globalSpacing),
@@ -107,7 +113,7 @@ Widget chatInputBottom(BuildContext context) {
           ),
           const SizedBox(width: globalSpacing),
           InkWell(
-            onTap: () {},
+            onTap: () => Navigator.pushNamed(context, '/picker'),
             child: SvgPicture.asset('./assets/icons/picture.svg'),
           ),
         ],

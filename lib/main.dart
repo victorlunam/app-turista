@@ -28,10 +28,14 @@ import 'package:appturista/pages/search_location.dart';
 import 'package:appturista/pages/search_view.dart';
 import 'package:appturista/pages/settings_frequent_questions.dart';
 import 'package:appturista/pages/settings_notifications.dart';
-import 'package:appturista/pages/sign_in.dart';
-import 'package:appturista/pages/sign_up.dart';
-import 'package:appturista/pages/sign_up_data.dart';
-import 'package:appturista/pages/sign_up_preferences.dart';
+import 'package:appturista/presentation/home/messages.dart';
+import 'package:appturista/presentation/home/reels.dart';
+import 'package:appturista/presentation/login/page.dart';
+import 'package:appturista/presentation/moments/detail.dart';
+import 'package:appturista/presentation/moments/friends.dart';
+import 'package:appturista/presentation/register/page.dart';
+import 'package:appturista/presentation/register/pages/data.dart';
+import 'package:appturista/presentation/register/pages/preferences.dart';
 import 'package:appturista/pages/recover_update_password.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -89,10 +93,10 @@ class MyApp extends StatelessWidget {
         onGenerateRoute: (settings) {
           var routes = <String, WidgetBuilder>{
             '/': (context) => const RootPage(),
-            '/signIn': (context) => const SignInPage(),
-            '/signUp': (context) => const SignUpPage(),
-            '/signUp/data': (context) => const SignUpDataPage(),
-            '/signUp/preferences': (context) => const SignUpPreferencesPage(),
+            '/login': (context) => const SignInPage(),
+            '/register': (context) => const SignUpPage(),
+            '/register/data': (context) => const SignUpDataPage(),
+            '/register/preferences': (context) => const SignUpPreferencesPage(),
             '/recover': (context) => const RecoverPage(),
             '/recover/shippingNotification': (context) =>
                 const RecoverShippingNotificationPage(),
@@ -103,6 +107,8 @@ class MyApp extends StatelessWidget {
               final arg = settings.arguments;
               return HomePage(indexBottom: arg as int);
             },
+            '/home/reels': (context) => const HomeReelsPage(),
+            '/home/messages': (context) => const HomeMessagesPage(),
             '/search': (context) => const SearchPage(),
             '/search/view': (context) {
               final title = settings.arguments;
@@ -145,10 +151,18 @@ class MyApp extends StatelessWidget {
                 const SettingsFrequentQuestionsPage(),
             '/settings/notifications': (context) =>
                 const SettingsNotificationsPage(),
-            '/camera': (context) => const CameraPage(),
+            '/camera': (context) {
+              final arg = settings.arguments;
+              return CameraPage(
+                user: arg as User?,
+              );
+            },
             '/camera/view': (context) {
-              final path = settings.arguments;
-              return CameraViewPage(path: path as String);
+              final arg = settings.arguments;
+              return CameraViewPage(
+                path: (arg as CameraPageViewArguments).path,
+                user: arg.user,
+              );
             },
             '/picker': (context) => const AlbumPageView(),
             '/moment/create': (context) {
@@ -156,6 +170,8 @@ class MyApp extends StatelessWidget {
               return MomentCreate(path: path as String);
             },
             '/moment/visibility': (context) => const MomentVisibilityPage(),
+            '/moment/detail': (context) => const MomentsDetailPage(),
+            '/moment/friends': (context) => const MomentsFriendsPage(),
           };
           WidgetBuilder? builder = routes[settings.name];
           return MaterialPageRoute(builder: (ctx) => builder!(ctx));

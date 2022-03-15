@@ -126,7 +126,11 @@ class _HomePageState extends State<HomePage> {
   ];
 
   _handleChangeViewBottomNavigation(int index) {
-    if (index == 2) {
+    if (index == 4) {
+      Navigator.pushNamed(context, '/home/messages');
+    } else if (index == 3) {
+      Navigator.pushNamed(context, '/home/reels');
+    } else if (index == 2) {
       Navigator.pushNamed(context, '/camera');
     } else {
       setState(() {

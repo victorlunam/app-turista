@@ -2,7 +2,7 @@ import 'dart:collection';
 
 import 'package:photo_manager/photo_manager.dart';
 
-typedef EvictionHandler<K, V>(K key, V value);
+typedef EvictionHandler<K, V> = Function(K key, V value);
 
 class LRUMap<K, V> {
   final LinkedHashMap<K, V> _map = LinkedHashMap<K, V>();
@@ -35,7 +35,7 @@ class LRUMap<K, V> {
 }
 
 class ImageLruCache {
-  static LRUMap<_ImageCacheEntity, AssetEntityImageProvider> _map =
+  static final LRUMap<_ImageCacheEntity, AssetEntityImageProvider> _map =
       LRUMap(2000);
   static AssetEntityImageProvider? getData(AssetEntity entity,
       [int size = 64, ThumbnailFormat format = ThumbnailFormat.jpeg]) {

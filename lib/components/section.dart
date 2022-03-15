@@ -66,27 +66,30 @@ class DestinationsSection extends StatelessWidget {
         itemBuilder: (BuildContext ctx, index) {
           double margin =
               destinationList.length == (index - 1) ? 0 : globalSpacing / 5;
-          return Container(
-            alignment: Alignment.bottomLeft,
-            padding: const EdgeInsets.only(
-              bottom: globalSpacing,
-              left: globalSpacing,
-            ),
-            margin: EdgeInsets.only(right: margin),
-            width: MediaQuery.of(context).size.width * 0.35,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(destinationList[index]['image'] ?? ''),
-                fit: BoxFit.cover,
+          return InkWell(
+            onTap: () => Navigator.pushNamed(context, '/moment/detail'),
+            child: Container(
+              alignment: Alignment.bottomLeft,
+              padding: const EdgeInsets.only(
+                bottom: globalSpacing,
+                left: globalSpacing,
               ),
-              borderRadius: BorderRadius.circular(globalBorderRadius),
-            ),
-            child: Text(
-              // destinationList[index]['title'] ?? '',
-              '',
-              style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                    color: Colors.white,
-                  ),
+              margin: EdgeInsets.only(right: margin),
+              width: MediaQuery.of(context).size.width * 0.35,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(destinationList[index]['image'] ?? ''),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(globalBorderRadius),
+              ),
+              child: Text(
+                // destinationList[index]['title'] ?? '',
+                '',
+                style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                      color: Colors.white,
+                    ),
+              ),
             ),
           );
         },
@@ -136,91 +139,97 @@ class MomentsSection extends StatelessWidget {
         itemBuilder: (BuildContext ctx, index) {
           double margin =
               momentsList.length == (index - 1) ? 0 : globalSpacing / 5;
-          return Container(
-            alignment: Alignment.bottomLeft,
-            margin: EdgeInsets.only(right: margin),
-            width: MediaQuery.of(context).size.width * 0.8,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(momentsList[index]['image'] ?? ''),
-                fit: BoxFit.cover,
-              ),
-              borderRadius: BorderRadius.circular(globalBorderRadius),
-            ),
+          return InkWell(
+            onTap: () => Navigator.pushNamed(context, '/moment/friends'),
             child: Container(
-              width: double.infinity,
-              height: double.infinity,
-              alignment: Alignment.bottomCenter,
-              padding: const EdgeInsets.only(
-                bottom: globalSpacing,
-                left: globalSpacing / 2,
-                right: globalSpacing / 2,
-              ),
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment(0.0, 0.6),
-                  colors: [
-                    Colors.black54,
-                    Colors.transparent,
-                  ],
+              alignment: Alignment.bottomLeft,
+              margin: EdgeInsets.only(right: margin),
+              width: MediaQuery.of(context).size.width * 0.8,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(momentsList[index]['image'] ?? ''),
+                  fit: BoxFit.cover,
                 ),
+                borderRadius: BorderRadius.circular(globalBorderRadius),
               ),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                      momentsList[index]['userPhotoPath'] ?? '',
-                    ),
-                  ),
-                  const SizedBox(width: globalSpacing),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        momentsList[index]['username'],
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              color: Colors.white,
-                            ),
-                      ),
-                      Row(
-                        children: [
-                          SvgPicture.asset('./assets/icons/pin_map.svg'),
-                          const SizedBox(width: globalSpacing / 2),
-                          Text(
-                            momentsList[index]['place'],
-                            style:
-                                Theme.of(context).textTheme.subtitle2?.copyWith(
-                                      color: Colors.white,
-                                    ),
-                          )
-                        ],
-                      )
+              child: Container(
+                width: double.infinity,
+                height: double.infinity,
+                alignment: Alignment.bottomCenter,
+                padding: const EdgeInsets.only(
+                  bottom: globalSpacing,
+                  left: globalSpacing / 2,
+                  right: globalSpacing / 2,
+                ),
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment(0.0, 0.6),
+                    colors: [
+                      Colors.black54,
+                      Colors.transparent,
                     ],
                   ),
-                  const Expanded(child: SizedBox()),
-                  SvgPicture.asset('./assets/icons/favorite.svg'),
-                  const SizedBox(width: globalSpacing / 2),
-                  Text(
-                    momentsList[index]['likes'].toString(),
-                    style: const TextStyle(
+                ),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage(
+                        momentsList[index]['userPhotoPath'] ?? '',
+                      ),
+                    ),
+                    const SizedBox(width: globalSpacing),
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          momentsList[index]['username'],
+                          style:
+                              Theme.of(context).textTheme.subtitle1?.copyWith(
+                                    color: Colors.white,
+                                  ),
+                        ),
+                        Row(
+                          children: [
+                            SvgPicture.asset('./assets/icons/pin_map.svg'),
+                            const SizedBox(width: globalSpacing / 2),
+                            Text(
+                              momentsList[index]['place'],
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle2
+                                  ?.copyWith(
+                                    color: Colors.white,
+                                  ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                    const Expanded(child: SizedBox()),
+                    SvgPicture.asset('./assets/icons/favorite.svg'),
+                    const SizedBox(width: globalSpacing / 2),
+                    Text(
+                      momentsList[index]['likes'].toString(),
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(width: globalSpacing),
+                    SvgPicture.asset(
+                      './assets/icons/messages.svg',
                       color: Colors.white,
                     ),
-                  ),
-                  const SizedBox(width: globalSpacing),
-                  SvgPicture.asset(
-                    './assets/icons/messages.svg',
-                    color: Colors.white,
-                  ),
-                  const SizedBox(width: globalSpacing / 2),
-                  Text(
-                    momentsList[index]['comments'].toString(),
-                    style: const TextStyle(
-                      color: Colors.white,
+                    const SizedBox(width: globalSpacing / 2),
+                    Text(
+                      momentsList[index]['comments'].toString(),
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           );

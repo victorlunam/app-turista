@@ -153,8 +153,9 @@ class _ImageThumbnailState extends State<ImageThumbnail> {
 }
 
 class FadeImageBuilder extends StatelessWidget {
-  int milliseconds;
-  FadeImageBuilder({Key? key, this.milliseconds = 300, required this.child})
+  final int milliseconds;
+  const FadeImageBuilder(
+      {Key? key, this.milliseconds = 300, required this.child})
       : super(key: key);
   final Widget child;
   @override

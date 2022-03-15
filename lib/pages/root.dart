@@ -35,7 +35,7 @@ class RootPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.8,
               height: 50,
               child: ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/signUp'),
+                onPressed: () => Navigator.pushNamed(context, '/register'),
                 child: const Text(
                   'Regístrate gratis',
                   style: TextStyle(
@@ -53,7 +53,7 @@ class RootPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.8,
               height: 50,
               child: ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/signIn'),
+                onPressed: () => Navigator.pushNamed(context, '/login'),
                 child: const Text(
                   'Ya tengo una cuenta',
                   style: TextStyle(

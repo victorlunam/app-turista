@@ -71,6 +71,7 @@ class _SettingsNotificationsPageState extends State<SettingsNotificationsPage> {
                     style: const TextStyle(
                       color: Color(0xFF939393),
                       fontSize: 16,
+                      fontFamily: 'Proxima Soft',
                     ),
                   ),
                   dense: true,

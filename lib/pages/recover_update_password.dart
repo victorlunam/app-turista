@@ -37,7 +37,7 @@ class _RecoverUpdatePasswordPageState extends State<RecoverUpdatePasswordPage> {
             TextButton(
               onPressed: () => Navigator.popUntil(
                 context,
-                ModalRoute.withName('/signIn'),
+                ModalRoute.withName('/login'),
               ),
               child: const Text(
                 'Continuar',

@@ -33,7 +33,6 @@ class AssetPathProvider extends ChangeNotifier {
     page = 0;
     list.clear();
     list.addAll(mList);
-    print(list[0].title);
     isInit = true;
     notifyListeners();
     refreshing = false;

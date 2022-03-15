@@ -30,7 +30,7 @@ class SignUpPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.9,
             height: 50,
             child: ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, '/signUp/data'),
+              onPressed: () => Navigator.pushNamed(context, '/register/data'),
               child: Row(
                 children: [
                   SvgPicture.asset(

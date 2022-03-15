@@ -1,5 +1,6 @@
+import 'dart:io';
+
 import 'package:appturista/utils/global_variables.dart';
-import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

@@ -73,7 +73,7 @@ class _SignUpDataPageState extends State<SignUpDataPage> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () =>
-                      Navigator.pushNamed(context, '/signUp/preferences'),
+                      Navigator.pushNamed(context, '/register/preferences'),
                   child: const Text(
                     'Iniciar',
                     style: TextStyle(

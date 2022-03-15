@@ -1,3 +1,5 @@
+import 'package:appturista/models/user.dart';
+import 'package:appturista/pages/camera_view.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +8,9 @@ import 'package:flutter_svg/svg.dart';
 late List<CameraDescription> cameras;
 
 class CameraPage extends StatefulWidget {
-  const CameraPage({Key? key}) : super(key: key);
+  const CameraPage({Key? key, this.user}) : super(key: key);
+
+  final User? user;
 
   @override
   State<CameraPage> createState() => _CameraPageState();
@@ -40,7 +44,7 @@ class _CameraPageState extends State<CameraPage> {
     Navigator.pushNamed(
       context,
       '/camera/view',
-      arguments: file.path,
+      arguments: CameraPageViewArguments(file.path, user: widget.user),
     );
   }
 

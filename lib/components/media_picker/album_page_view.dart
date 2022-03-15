@@ -39,7 +39,6 @@ class _AlbumPageViewState extends State<AlbumPageView>
       setState(() {
         assetsPathEntity = photoProvider.assetPathList[0];
       });
-      print(photoProvider.assetPathList.length);
     });
   }
 
