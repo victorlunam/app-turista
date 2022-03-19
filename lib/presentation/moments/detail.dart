@@ -1,5 +1,5 @@
-import 'package:appturista/components/profile_moments.dart';
-import 'package:appturista/components/profile_reels.dart';
+import 'package:appturista/presentation/profile/widgets/profile_moments.dart';
+import 'package:appturista/presentation/profile/widgets/profile_reels.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
@@ -22,19 +22,19 @@ class _MomentsDetailPageState extends State<MomentsDetailPage>
 
   List<BottomNavigationBarItem> bottomNavigation = [
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/home.svg'),
+      icon: SvgPicture.asset('assets/icons/home.svg'),
       label: 'Inicio',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/moments.svg'),
+      icon: SvgPicture.asset('assets/icons/moments.svg'),
       label: 'Momentos',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/create.svg'),
+      icon: SvgPicture.asset('assets/icons/create.svg'),
       label: 'Crear',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/reels.svg'),
+      icon: SvgPicture.asset('assets/icons/reels.svg'),
       label: 'Reels',
     ),
     BottomNavigationBarItem(
@@ -47,7 +47,7 @@ class _MomentsDetailPageState extends State<MomentsDetailPage>
           ),
           textAlign: TextAlign.center,
         ),
-        child: SvgPicture.asset('./assets/icons/messages.svg'),
+        child: SvgPicture.asset('assets/icons/messages.svg'),
       ),
       label: 'Mensajes',
     ),
@@ -56,13 +56,13 @@ class _MomentsDetailPageState extends State<MomentsDetailPage>
   late final tabBarTabs = [
     Tab(
       icon: SvgPicture.asset(
-        './assets/icons/grid.svg',
+        'assets/icons/grid.svg',
         color: _indexTabBar != 0 ? const Color(0xFF939393) : Colors.black,
       ),
     ),
     Tab(
       icon: SvgPicture.asset(
-        './assets/icons/play.svg',
+        'assets/icons/play.svg',
         color: _indexTabBar != 1 ? const Color(0xFF939393) : Colors.black,
       ),
     ),
@@ -76,7 +76,7 @@ class _MomentsDetailPageState extends State<MomentsDetailPage>
       appBar: AppBar(
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('./assets/icons/backbutton.svg'),
+          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
         ),
         title: const Text('Destinos del Momento'),
         centerTitle: true,
@@ -96,7 +96,7 @@ class _MomentsDetailPageState extends State<MomentsDetailPage>
                     AspectRatio(
                       aspectRatio: 5 / 3,
                       child: Image(
-                        image: AssetImage('./assets/images/machu_picchu.png'),
+                        image: AssetImage('assets/images/machu_picchu.png'),
                         fit: BoxFit.fitWidth,
                       ),
                     ),

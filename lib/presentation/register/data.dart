@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:appturista/presentation/widgets/custom_textfield.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class SignUpDataPage extends StatefulWidget {
+  const SignUpDataPage({Key? key}) : super(key: key);
 
   @override
-  State<SignInPage> createState() => _SignInPageState();
+  State<SignUpDataPage> createState() => _SignUpDataPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpDataPageState extends State<SignUpDataPage> {
+  final namesController = TextEditingController();
+  final lastNamesController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final repeatPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,41 +34,48 @@ class _SignInPageState extends State<SignInPage> {
               AppBar().preferredSize.height -
               MediaQuery.of(context).padding.top,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const SizedBox(height: 10),
               const Text(
-                'Iniciar sesión',
+                'Hola Viajero, llena tus\ndatos para iniciar',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 30),
+              CustomTextField(
+                controller: namesController,
+                label: 'Nombre',
+              ),
+              CustomTextField(
+                controller: lastNamesController,
+                label: 'Apellidos',
+              ),
               CustomTextField(
                 controller: emailController,
                 textInputType: TextInputType.emailAddress,
                 label: 'Correo electrónico',
               ),
-              const SizedBox(height: 30),
               CustomTextField(
                 controller: passwordController,
                 label: 'Contraseña',
                 type: 'password',
               ),
-              const Expanded(child: SizedBox()),
+              CustomTextField(
+                controller: repeatPasswordController,
+                label: 'Repita Contraseña',
+                type: 'password',
+              ),
+              const SizedBox(height: 10),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.9,
+                width: MediaQuery.of(context).size.width * 0.8,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    '/home',
-                    (Route<dynamic> route) => false,
-                    arguments: 0,
-                  ),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/register/preferences'),
                   child: const Text(
-                    'Ingresar',
+                    'Iniciar',
                     style: TextStyle(
                       fontSize: 16,
                     ),
@@ -75,38 +85,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
-              const Text(
-                'o Ingresar con',
-                style: TextStyle(
-                  color: Color(0xff939393),
-                ),
-              ),
-              const SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset('assets/icons/facebook_color.svg'),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset('assets/icons/google.svg'),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 30),
-              TextButton(
-                onPressed: () => Navigator.pushNamed(context, '/recover'),
-                child: const Text(
-                  '¿Olvidaste tu contraseña?',
-                  style: TextStyle(
-                    color: Color(0xFF212121),
-                  ),
-                ),
-              ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              const SizedBox(height: 10),
             ],
           ),
         ),

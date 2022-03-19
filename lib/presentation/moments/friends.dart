@@ -7,9 +7,9 @@ int countNotification = 2;
 
 List<Map<String, dynamic>> momentsList = [
   {
-    "image": './assets/images/moments/1.png',
+    "image": 'assets/images/moments/1.png',
     "username": "Joselu123",
-    "userPhotoPath": "./assets/images/users/user_1.png",
+    "userPhotoPath": "assets/images/users/user_1.png",
     "place": "Cuzco",
     "comments": 48,
     "likes": 270,
@@ -17,9 +17,9 @@ List<Map<String, dynamic>> momentsList = [
     "description": "En busca de nuevos rumbos",
   },
   {
-    "image": './assets/images/moments/2.png',
+    "image": 'assets/images/moments/2.png',
     "username": "Joselu123",
-    "userPhotoPath": "./assets/images/users/user_1.png",
+    "userPhotoPath": "assets/images/users/user_1.png",
     "place": "Mancora",
     "comments": 65,
     "likes": 340,
@@ -27,9 +27,9 @@ List<Map<String, dynamic>> momentsList = [
     "description": "Conociendo nuestro maravilloso Perú",
   },
   {
-    "image": './assets/images/moments/4.png',
+    "image": 'assets/images/moments/4.png',
     "username": "Joselu123",
-    "userPhotoPath": "./assets/images/users/user_1.png",
+    "userPhotoPath": "assets/images/users/user_1.png",
     "place": "Medellin",
     "comments": 98,
     "likes": 123,
@@ -54,19 +54,19 @@ class _MomentsFriendsPageState extends State<MomentsFriendsPage>
 
   List<BottomNavigationBarItem> bottomNavigation = [
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/home.svg'),
+      icon: SvgPicture.asset('assets/icons/home.svg'),
       label: 'Inicio',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/moments.svg'),
+      icon: SvgPicture.asset('assets/icons/moments.svg'),
       label: 'Momentos',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/create.svg'),
+      icon: SvgPicture.asset('assets/icons/create.svg'),
       label: 'Crear',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/reels.svg'),
+      icon: SvgPicture.asset('assets/icons/reels.svg'),
       label: 'Reels',
     ),
     BottomNavigationBarItem(
@@ -79,7 +79,7 @@ class _MomentsFriendsPageState extends State<MomentsFriendsPage>
           ),
           textAlign: TextAlign.center,
         ),
-        child: SvgPicture.asset('./assets/icons/messages.svg'),
+        child: SvgPicture.asset('assets/icons/messages.svg'),
       ),
       label: 'Mensajes',
     ),
@@ -92,7 +92,7 @@ class _MomentsFriendsPageState extends State<MomentsFriendsPage>
         toolbarHeight: AppBar().preferredSize.height + globalSpacing * 2,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('./assets/icons/backbutton.svg'),
+          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
         ),
         title: const Text('Momentos de Amigos'),
         centerTitle: true,
@@ -169,7 +169,7 @@ Widget _buildMoments() {
                       Row(
                         children: [
                           SvgPicture.asset(
-                            './assets/icons/pin_map.svg',
+                            'assets/icons/pin_map.svg',
                             color: const Color(0xFFB1B1B1),
                           ),
                           const SizedBox(width: globalSpacing / 2),
@@ -190,7 +190,7 @@ Widget _buildMoments() {
                   ),
                   const SizedBox(width: globalSpacing),
                   SvgPicture.asset(
-                    './assets/icons/dots.svg',
+                    'assets/icons/dots.svg',
                     color: const Color(0xFFB1B1B1),
                   ),
                 ],
@@ -227,7 +227,7 @@ Widget _buildMoments() {
               child: Row(
                 children: [
                   SvgPicture.asset(
-                    './assets/icons/favorite_filled.svg',
+                    'assets/icons/favorite_filled.svg',
                     color: const Color(0xFFFF2953),
                   ),
                   const SizedBox(width: globalSpacing / 2),
@@ -239,7 +239,7 @@ Widget _buildMoments() {
                   ),
                   const SizedBox(width: globalSpacing),
                   SvgPicture.asset(
-                    './assets/icons/messages.svg',
+                    'assets/icons/messages.svg',
                     color: const Color(0xFFB1B1B1),
                   ),
                   const SizedBox(width: globalSpacing / 2),
@@ -251,12 +251,12 @@ Widget _buildMoments() {
                   ),
                   const Expanded(child: SizedBox()),
                   SvgPicture.asset(
-                    './assets/icons/bookmark.svg',
+                    'assets/icons/bookmark.svg',
                     color: const Color(0xFFB1B1B1),
                   ),
                   const SizedBox(width: globalSpacing),
                   SvgPicture.asset(
-                    './assets/icons/shared.svg',
+                    'assets/icons/shared.svg',
                     color: const Color(0xFFB1B1B1),
                   ),
                 ],

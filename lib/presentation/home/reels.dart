@@ -6,25 +6,25 @@ import 'package:flutter_svg/svg.dart';
 int countNotification = 2;
 
 List<String> followings = [
-  './assets/images/reels/1.png',
-  './assets/images/reels/2.png',
-  './assets/images/reels/3.png',
-  './assets/images/reels/4.png',
-  './assets/images/reels/1.png',
-  './assets/images/reels/2.png',
-  './assets/images/reels/3.png',
-  './assets/images/reels/4.png',
+  'assets/images/reels/1.png',
+  'assets/images/reels/2.png',
+  'assets/images/reels/3.png',
+  'assets/images/reels/4.png',
+  'assets/images/reels/1.png',
+  'assets/images/reels/2.png',
+  'assets/images/reels/3.png',
+  'assets/images/reels/4.png',
 ];
 
 List<String> friends = [
-  './assets/images/reels/3.png',
-  './assets/images/reels/2.png',
-  './assets/images/reels/3.png',
-  './assets/images/reels/2.png',
-  './assets/images/reels/4.png',
-  './assets/images/reels/1.png',
-  './assets/images/reels/4.png',
-  './assets/images/reels/1.png',
+  'assets/images/reels/3.png',
+  'assets/images/reels/2.png',
+  'assets/images/reels/3.png',
+  'assets/images/reels/2.png',
+  'assets/images/reels/4.png',
+  'assets/images/reels/1.png',
+  'assets/images/reels/4.png',
+  'assets/images/reels/1.png',
 ];
 
 class HomeReelsPage extends StatefulWidget {
@@ -41,19 +41,19 @@ class _HomeReelsPageState extends State<HomeReelsPage>
 
   List<BottomNavigationBarItem> bottomNavigation = [
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/home.svg'),
+      icon: SvgPicture.asset('assets/icons/home.svg'),
       label: 'Inicio',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/moments.svg'),
+      icon: SvgPicture.asset('assets/icons/moments.svg'),
       label: 'Momentos',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/create.svg'),
+      icon: SvgPicture.asset('assets/icons/create.svg'),
       label: 'Crear',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/reels.svg'),
+      icon: SvgPicture.asset('assets/icons/reels.svg'),
       label: 'Reels',
     ),
     BottomNavigationBarItem(
@@ -66,7 +66,7 @@ class _HomeReelsPageState extends State<HomeReelsPage>
           ),
           textAlign: TextAlign.center,
         ),
-        child: SvgPicture.asset('./assets/icons/messages.svg'),
+        child: SvgPicture.asset('assets/icons/messages.svg'),
       ),
       label: 'Mensajes',
     ),
@@ -79,7 +79,7 @@ class _HomeReelsPageState extends State<HomeReelsPage>
         toolbarHeight: AppBar().preferredSize.height + globalSpacing * 2,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('./assets/icons/backbutton.svg'),
+          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
         ),
         title: const Text('Reels'),
         centerTitle: true,
@@ -149,7 +149,7 @@ Widget _builderReels(BuildContext context, List list) {
             child: Row(
               children: [
                 SvgPicture.asset(
-                  './assets/icons/play_triangle.svg',
+                  'assets/icons/play_triangle.svg',
                   color: Colors.white,
                 ),
                 const Text(

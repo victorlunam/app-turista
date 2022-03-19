@@ -9,7 +9,7 @@ int countNotification = 2;
 List<Map<String, dynamic>> messages = [
   {
     'username': 'Adolfo123',
-    'photo': './assets/images/users/user_1.png',
+    'photo': 'assets/images/users/user_1.png',
     'date': 'Enviado hace una hora',
     'numberUnreadMesssages': 2,
     'unreadMessages': true,
@@ -18,7 +18,7 @@ List<Map<String, dynamic>> messages = [
   },
   {
     'username': 'Lina',
-    'photo': './assets/images/users/user_2.png',
+    'photo': 'assets/images/users/user_2.png',
     'date': 'Enviado hace 5 min',
     'numberUnreadMesssages': 0,
     'unreadMessages': false,
@@ -27,7 +27,7 @@ List<Map<String, dynamic>> messages = [
   },
   {
     'username': 'Sebastians2',
-    'photo': './assets/images/users/user_3.png',
+    'photo': 'assets/images/users/user_3.png',
     'date': 'Activo el 24Dic',
     'numberUnreadMesssages': 2,
     'unreadMessages': true,
@@ -49,19 +49,19 @@ class _HomeMessagesPageState extends State<HomeMessagesPage>
       TabController(length: 2, vsync: this);
   List<BottomNavigationBarItem> bottomNavigation = [
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/home.svg'),
+      icon: SvgPicture.asset('assets/icons/home.svg'),
       label: 'Inicio',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/moments.svg'),
+      icon: SvgPicture.asset('assets/icons/moments.svg'),
       label: 'Momentos',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/create.svg'),
+      icon: SvgPicture.asset('assets/icons/create.svg'),
       label: 'Crear',
     ),
     BottomNavigationBarItem(
-      icon: SvgPicture.asset('./assets/icons/reels.svg'),
+      icon: SvgPicture.asset('assets/icons/reels.svg'),
       label: 'Reels',
     ),
     BottomNavigationBarItem(
@@ -74,7 +74,7 @@ class _HomeMessagesPageState extends State<HomeMessagesPage>
           ),
           textAlign: TextAlign.center,
         ),
-        child: SvgPicture.asset('./assets/icons/messages.svg'),
+        child: SvgPicture.asset('assets/icons/messages.svg'),
       ),
       label: 'Mensajes',
     ),
@@ -92,7 +92,7 @@ class _HomeMessagesPageState extends State<HomeMessagesPage>
               centerTitle: true,
               leading: IconButton(
                 onPressed: () => Navigator.pop(context),
-                icon: SvgPicture.asset('./assets/icons/backbutton.svg'),
+                icon: SvgPicture.asset('assets/icons/backbutton.svg'),
               ),
               bottom: TabBar(
                 padding: const EdgeInsets.all(globalSpacing),
@@ -154,7 +154,7 @@ class _HomeMessagesPageState extends State<HomeMessagesPage>
                       IconButton(
                         onPressed: () {},
                         icon: SvgPicture.asset(
-                          './assets/icons/search.svg',
+                          'assets/icons/search.svg',
                           color: const Color(0xFF939393),
                         ),
                       )

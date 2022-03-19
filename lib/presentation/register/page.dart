@@ -10,7 +10,7 @@ class SignUpPage extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('./assets/icons/backbutton.svg'),
+          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
         ),
       ),
       body: Column(
@@ -34,7 +34,7 @@ class SignUpPage extends StatelessWidget {
               child: Row(
                 children: [
                   SvgPicture.asset(
-                    './assets/icons/email.svg',
+                    'assets/icons/email.svg',
                     width: 28,
                   ),
                   const Expanded(
@@ -63,7 +63,7 @@ class SignUpPage extends StatelessWidget {
               child: Row(
                 children: [
                   SvgPicture.asset(
-                    './assets/icons/google.svg',
+                    'assets/icons/google.svg',
                     height: 28,
                   ),
                   const Expanded(
@@ -92,7 +92,7 @@ class SignUpPage extends StatelessWidget {
               child: Row(
                 children: [
                   SvgPicture.asset(
-                    './assets/icons/facebook.svg',
+                    'assets/icons/facebook.svg',
                     height: 28,
                   ),
                   const Expanded(
