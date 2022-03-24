@@ -1,5 +1,5 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ProfileSettingsPersonalInformation extends StatefulWidget {
   const ProfileSettingsPersonalInformation({Key? key}) : super(key: key);
@@ -14,6 +14,7 @@ class _ProfileSettingsPersonalInformationState
   final numberPhoneController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  int isOlder = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +22,12 @@ class _ProfileSettingsPersonalInformationState
       appBar: AppBar(
         title: const Text('Datos Personales'),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       body: ListView(
         shrinkWrap: true,
-        children: const [
-          ListTile(
+        children: [
+          const ListTile(
             title: Text(
               'Sexo',
               style: TextStyle(
@@ -44,8 +42,8 @@ class _ProfileSettingsPersonalInformationState
               ),
             ),
           ),
-          Divider(),
-          ListTile(
+          const Divider(),
+          const ListTile(
             title: Text(
               'Nacimiento',
               style: TextStyle(
@@ -60,8 +58,8 @@ class _ProfileSettingsPersonalInformationState
               ),
             ),
           ),
-          Divider(),
-          ListTile(
+          const Divider(),
+          const ListTile(
             title: Text(
               'Documento de Identidad',
               style: TextStyle(
@@ -76,7 +74,27 @@ class _ProfileSettingsPersonalInformationState
               ),
             ),
           ),
-          Divider(),
+          const Divider(),
+          RadioListTile(
+            toggleable: true,
+            value: 1,
+            groupValue: isOlder,
+            onChanged: (int? value) {
+              setState(() {
+                if (value == 1) {
+                  isOlder = value!;
+                } else {
+                  isOlder = 0;
+                }
+              });
+            },
+            title: const Text(
+              'Soy mayor de 18 años',
+              style: TextStyle(
+                color: Color(0xFF939393),
+              ),
+            ),
+          )
         ],
       ),
     );

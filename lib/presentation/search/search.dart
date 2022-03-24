@@ -1,3 +1,4 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:appturista/presentation/widgets/appbar_textfield.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
@@ -121,6 +122,7 @@ class _SearchPageState extends State<SearchPage>
       icon: SvgPicture.asset(
         'assets/icons/search.svg',
         color: const Color(0xFF707070),
+        height: globalSizeIcon,
       ),
     ),
   ];
@@ -172,28 +174,28 @@ class _SearchPageState extends State<SearchPage>
         Tab(
           icon: SvgPicture.asset(
             'assets/icons/search.svg',
-            height: 25,
+            height: globalSizeIcon,
             color: _indexTabBar != 0 ? const Color(0xFF939393) : Colors.black,
           ),
         ),
         Tab(
           icon: SvgPicture.asset(
             'assets/icons/user.svg',
-            height: 25,
+            height: globalSizeIcon,
             color: _indexTabBar != 1 ? const Color(0xFF939393) : Colors.black,
           ),
         ),
         Tab(
           icon: SvgPicture.asset(
             'assets/icons/pin_map.svg',
-            height: 25,
+            height: globalSizeIcon,
             color: _indexTabBar != 2 ? const Color(0xFF939393) : Colors.black,
           ),
         ),
         Tab(
           icon: SvgPicture.asset(
             'assets/icons/hash.svg',
-            height: 25,
+            height: globalSizeIcon,
             color: _indexTabBar != 4 ? const Color(0xFF939393) : Colors.black,
           ),
         ),
@@ -207,7 +209,7 @@ class _SearchPageState extends State<SearchPage>
         SvgPicture.asset(
           'assets/icons/xmark.svg',
           color: const Color(0xFF707070),
-          height: 20,
+          height: globalSizeIconSmall,
         );
 
     List<Map<String, dynamic>> matchQuery = [];
@@ -238,7 +240,7 @@ class _SearchPageState extends State<SearchPage>
                     child: SvgPicture.asset(
                       'assets/icons/pin_map.svg',
                       color: Colors.black,
-                      height: 20,
+                      height: globalSizeIcon,
                     ),
                   ),
                 ),
@@ -259,10 +261,7 @@ class _SearchPageState extends State<SearchPage>
     double heightAppbar = AppBar().preferredSize.height;
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         title: AppBarTextField(
           focusNode: focus,
           onChanged: _handleChange,

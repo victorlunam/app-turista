@@ -1,7 +1,7 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/presentation/widgets/bottom_navigation.dart';
 import 'package:appturista/utils/global_variables.dart';
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 int countNotification = 2;
 
@@ -68,39 +68,6 @@ class NotificationsPage extends StatefulWidget {
 }
 
 class _NotificationsPageState extends State<NotificationsPage> {
-  List<BottomNavigationBarItem> bottomNavigation = [
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/home.svg'),
-      label: 'Inicio',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/moments.svg'),
-      label: 'Momentos',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/create.svg'),
-      label: 'Crear',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/reels.svg'),
-      label: 'Reels',
-    ),
-    BottomNavigationBarItem(
-      icon: Badge(
-        badgeContent: Text(
-          countNotification.toString(),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        child: SvgPicture.asset('assets/icons/messages.svg'),
-      ),
-      label: 'Mensajes',
-    ),
-  ];
-
   switchRoute(String type) {
     Map<String, String> _handleRoute = {
       "liked": "/notifications/liked",
@@ -170,10 +137,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
       appBar: AppBar(
         title: const Text('Joselu124'),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: globalSpacing * 2),
@@ -196,14 +160,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: bottomNavigation,
-        elevation: 0,
-        backgroundColor: Colors.white,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+      bottomNavigationBar: const BottomNavigation(currentIndex: 0),
     );
   }
 }

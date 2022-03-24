@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -20,10 +21,7 @@ class _MomentCreateState extends State<MomentCreate> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         title: const Text('Crear Momento'),
         centerTitle: true,
       ),
@@ -32,21 +30,25 @@ class _MomentCreateState extends State<MomentCreate> {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: globalSpacing),
-              child: AspectRatio(
-                aspectRatio: 1,
-                child: Container(
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: FileImage(File(widget.path)),
-                      fit: BoxFit.cover,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  AspectRatio(
+                    aspectRatio: 1,
+                    child: InteractiveViewer(
+                      constrained: false,
+                      child: Image.file(
+                        File(widget.path),
+                        width: MediaQuery.of(context).size.width -
+                            (globalSpacing * 2),
+                      ),
                     ),
                   ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset('assets/icons/plus.svg'),
+                  SvgPicture.asset(
+                    'assets/icons/plus.svg',
+                    height: globalSizeIcon,
                   ),
-                ),
+                ],
               ),
             ),
             const SizedBox(height: globalSpacing * 2),
@@ -148,7 +150,7 @@ class _MomentCreateState extends State<MomentCreate> {
                 children: [
                   SvgPicture.asset(
                     'assets/icons/eye.svg',
-                    height: globalSizeIcon * 0.6,
+                    height: globalSizeIcon,
                     color: Colors.black,
                   ),
                   const SizedBox(width: globalSpacing),

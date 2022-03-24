@@ -22,10 +22,11 @@ class SectionTitle extends StatelessWidget {
       width: double.infinity,
       child: Row(
         children: [
-          SvgPicture.asset(pathIcon),
-          const SizedBox(
-            width: 5,
+          SvgPicture.asset(
+            pathIcon,
+            height: globalSizeIcon * 2,
           ),
+          const SizedBox(width: globalSpacing),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,7 +85,6 @@ class DestinationsSection extends StatelessWidget {
                 borderRadius: BorderRadius.circular(globalBorderRadius),
               ),
               child: Text(
-                // destinationList[index]['title'] ?? '',
                 '',
                 style: Theme.of(context).textTheme.subtitle1?.copyWith(
                       color: Colors.white,
@@ -190,25 +190,38 @@ class MomentsSection extends StatelessWidget {
                                     color: Colors.white,
                                   ),
                         ),
-                        Row(
-                          children: [
-                            SvgPicture.asset('assets/icons/pin_map.svg'),
-                            const SizedBox(width: globalSpacing / 2),
-                            Text(
-                              momentsList[index]['place'],
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .subtitle2
-                                  ?.copyWith(
-                                    color: Colors.white,
-                                  ),
-                            )
-                          ],
+                        InkWell(
+                          onTap: () => Navigator.pushNamed(
+                            context,
+                            '/search/view',
+                            arguments: momentsList[index]['place'],
+                          ),
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/pin_map.svg',
+                                height: globalSizeIcon,
+                              ),
+                              const SizedBox(width: globalSpacing / 2),
+                              Text(
+                                momentsList[index]['place'],
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .subtitle2
+                                    ?.copyWith(
+                                      color: Colors.white,
+                                    ),
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
                     const Expanded(child: SizedBox()),
-                    SvgPicture.asset('assets/icons/favorite.svg'),
+                    SvgPicture.asset(
+                      'assets/icons/favorite.svg',
+                      height: globalSizeIcon,
+                    ),
                     const SizedBox(width: globalSpacing / 2),
                     Text(
                       momentsList[index]['likes'].toString(),
@@ -220,6 +233,7 @@ class MomentsSection extends StatelessWidget {
                     SvgPicture.asset(
                       'assets/icons/messages.svg',
                       color: Colors.white,
+                      height: globalSizeIcon,
                     ),
                     const SizedBox(width: globalSpacing / 2),
                     Text(

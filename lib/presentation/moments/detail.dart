@@ -1,7 +1,8 @@
 import 'package:appturista/presentation/profile/widgets/profile_moments.dart';
 import 'package:appturista/presentation/profile/widgets/profile_reels.dart';
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/presentation/widgets/bottom_navigation.dart';
 import 'package:appturista/utils/global_variables.dart';
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -20,50 +21,19 @@ class _MomentsDetailPageState extends State<MomentsDetailPage>
       TabController(length: 2, vsync: this);
   int _indexTabBar = 0;
 
-  List<BottomNavigationBarItem> bottomNavigation = [
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/home.svg'),
-      label: 'Inicio',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/moments.svg'),
-      label: 'Momentos',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/create.svg'),
-      label: 'Crear',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/reels.svg'),
-      label: 'Reels',
-    ),
-    BottomNavigationBarItem(
-      icon: Badge(
-        badgeContent: Text(
-          countNotification.toString(),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        child: SvgPicture.asset('assets/icons/messages.svg'),
-      ),
-      label: 'Mensajes',
-    ),
-  ];
-
   late final tabBarTabs = [
     Tab(
       icon: SvgPicture.asset(
         'assets/icons/grid.svg',
         color: _indexTabBar != 0 ? const Color(0xFF939393) : Colors.black,
+        height: globalSizeIcon,
       ),
     ),
     Tab(
       icon: SvgPicture.asset(
         'assets/icons/play.svg',
         color: _indexTabBar != 1 ? const Color(0xFF939393) : Colors.black,
+        height: globalSizeIcon,
       ),
     ),
   ];
@@ -74,10 +44,7 @@ class _MomentsDetailPageState extends State<MomentsDetailPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         title: const Text('Destinos del Momento'),
         centerTitle: true,
       ),
@@ -146,14 +113,7 @@ class _MomentsDetailPageState extends State<MomentsDetailPage>
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: bottomNavigation,
-        elevation: 0,
-        backgroundColor: Colors.white,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+      bottomNavigationBar: const BottomNavigation(currentIndex: 0),
     );
   }
 }

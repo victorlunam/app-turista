@@ -1,3 +1,5 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -8,10 +10,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       body: Column(
         children: [
@@ -35,7 +34,7 @@ class SignUpPage extends StatelessWidget {
                 children: [
                   SvgPicture.asset(
                     'assets/icons/email.svg',
-                    width: 28,
+                    height: globalSizeIcon,
                   ),
                   const Expanded(
                     child: Text(
@@ -64,7 +63,7 @@ class SignUpPage extends StatelessWidget {
                 children: [
                   SvgPicture.asset(
                     'assets/icons/google.svg',
-                    height: 28,
+                    height: globalSizeIcon,
                   ),
                   const Expanded(
                     child: Text(
@@ -93,7 +92,7 @@ class SignUpPage extends StatelessWidget {
                 children: [
                   SvgPicture.asset(
                     'assets/icons/facebook.svg',
-                    height: 28,
+                    height: globalSizeIcon,
                   ),
                   const Expanded(
                     child: Text(

@@ -1,6 +1,6 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:appturista/presentation/widgets/custom_radio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 List<Map<String, dynamic>> options = [
   {
@@ -50,10 +50,7 @@ class _SettingsNotificationsPageState extends State<SettingsNotificationsPage> {
       appBar: AppBar(
         title: const Text('Notificaciones'),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       body: ListView(
         children: [

@@ -4,6 +4,7 @@ import 'package:appturista/presentation/profile/widgets/profile_private.dart';
 import 'package:appturista/presentation/profile/widgets/profile_reels.dart';
 
 import 'package:appturista/models/user.dart';
+import 'package:appturista/presentation/widgets/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:badges/badges.dart';
@@ -54,49 +55,25 @@ class _ProfilePageState extends State<ProfilePage>
           ),
           textAlign: TextAlign.center,
         ),
-        child: SvgPicture.asset('assets/icons/bell.svg'),
+        child: SvgPicture.asset(
+          'assets/icons/bell.svg',
+          height: globalSizeIcon,
+        ),
       ),
     ),
     IconButton(
       onPressed: () {},
-      icon: SvgPicture.asset('assets/icons/search.svg'),
+      icon: SvgPicture.asset(
+        'assets/icons/search.svg',
+        height: globalSizeIcon,
+      ),
     ),
     IconButton(
       onPressed: () => Navigator.pushNamed(context, '/profile/settings'),
-      icon: SvgPicture.asset('assets/icons/bars.svg'),
-    ),
-  ];
-
-  List<BottomNavigationBarItem> bottomNavigation = [
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/home.svg'),
-      label: 'Inicio',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/moments.svg'),
-      label: 'Momentos',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/create.svg'),
-      label: 'Crear',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/reels.svg'),
-      label: 'Reels',
-    ),
-    BottomNavigationBarItem(
-      icon: Badge(
-        badgeContent: Text(
-          countNotification.toString(),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        child: SvgPicture.asset('assets/icons/messages.svg'),
+      icon: SvgPicture.asset(
+        'assets/icons/bars.svg',
+        height: globalSizeIcon,
       ),
-      label: 'Mensajes',
     ),
   ];
 
@@ -105,24 +82,28 @@ class _ProfilePageState extends State<ProfilePage>
       icon: SvgPicture.asset(
         'assets/icons/grid.svg',
         color: _indexTabBar != 0 ? const Color(0xFF939393) : Colors.black,
+        height: globalSizeIcon,
       ),
     ),
     Tab(
       icon: SvgPicture.asset(
         'assets/icons/play.svg',
         color: _indexTabBar != 1 ? const Color(0xFF939393) : Colors.black,
+        height: globalSizeIcon,
       ),
     ),
     Tab(
       icon: SvgPicture.asset(
         'assets/icons/bookmark.svg',
         color: _indexTabBar != 2 ? const Color(0xFF939393) : Colors.black,
+        height: globalSizeIcon,
       ),
     ),
     Tab(
       icon: SvgPicture.asset(
         'assets/icons/look.svg',
         color: _indexTabBar != 3 ? const Color(0xFF939393) : Colors.black,
+        height: globalSizeIcon,
       ),
     ),
   ];
@@ -372,14 +353,7 @@ class _ProfilePageState extends State<ProfilePage>
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: bottomNavigation,
-        elevation: 0,
-        backgroundColor: Colors.white,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+      bottomNavigationBar: const BottomNavigation(currentIndex: 0),
     );
   }
 

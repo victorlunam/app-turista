@@ -1,5 +1,6 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/presentation/widgets/bottom_navigation.dart';
 import 'package:appturista/utils/global_variables.dart';
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -52,48 +53,12 @@ class _MomentsFriendsPageState extends State<MomentsFriendsPage>
 
   int _indexTabBar = 0;
 
-  List<BottomNavigationBarItem> bottomNavigation = [
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/home.svg'),
-      label: 'Inicio',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/moments.svg'),
-      label: 'Momentos',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/create.svg'),
-      label: 'Crear',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/reels.svg'),
-      label: 'Reels',
-    ),
-    BottomNavigationBarItem(
-      icon: Badge(
-        badgeContent: Text(
-          countNotification.toString(),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        child: SvgPicture.asset('assets/icons/messages.svg'),
-      ),
-      label: 'Mensajes',
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: AppBar().preferredSize.height + globalSpacing * 2,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         title: const Text('Momentos de Amigos'),
         centerTitle: true,
         bottom: TabBar(
@@ -128,14 +93,7 @@ class _MomentsFriendsPageState extends State<MomentsFriendsPage>
           const SizedBox(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: bottomNavigation,
-        elevation: 0,
-        backgroundColor: Colors.white,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+      bottomNavigationBar: const BottomNavigation(currentIndex: 0),
     );
   }
 }
@@ -166,18 +124,33 @@ Widget _buildMoments() {
                         momentsList[index]['username'],
                         style: Theme.of(context).textTheme.subtitle1,
                       ),
-                      Row(
-                        children: [
-                          SvgPicture.asset(
-                            'assets/icons/pin_map.svg',
-                            color: const Color(0xFFB1B1B1),
+                      InkWell(
+                        onTap: () => Navigator.pushNamed(
+                          context,
+                          '/search/view',
+                          arguments: momentsList[index]['place'],
+                        ),
+                        child: InkWell(
+                          onTap: () => Navigator.pushNamed(
+                            context,
+                            '/search/view',
+                            arguments: momentsList[index]['place'],
                           ),
-                          const SizedBox(width: globalSpacing / 2),
-                          Text(
-                            momentsList[index]['place'],
-                            style: Theme.of(context).textTheme.subtitle2,
-                          )
-                        ],
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/pin_map.svg',
+                                color: const Color(0xFFB1B1B1),
+                                height: globalSizeIconSmall,
+                              ),
+                              const SizedBox(width: globalSpacing / 2),
+                              Text(
+                                momentsList[index]['place'],
+                                style: Theme.of(context).textTheme.subtitle2,
+                              )
+                            ],
+                          ),
+                        ),
                       )
                     ],
                   ),
@@ -192,6 +165,7 @@ Widget _buildMoments() {
                   SvgPicture.asset(
                     'assets/icons/dots.svg',
                     color: const Color(0xFFB1B1B1),
+                    height: globalSizeIcon,
                   ),
                 ],
               ),
@@ -229,6 +203,7 @@ Widget _buildMoments() {
                   SvgPicture.asset(
                     'assets/icons/favorite_filled.svg',
                     color: const Color(0xFFFF2953),
+                    height: globalSizeIcon,
                   ),
                   const SizedBox(width: globalSpacing / 2),
                   Text(
@@ -241,6 +216,7 @@ Widget _buildMoments() {
                   SvgPicture.asset(
                     'assets/icons/messages.svg',
                     color: const Color(0xFFB1B1B1),
+                    height: globalSizeIcon,
                   ),
                   const SizedBox(width: globalSpacing / 2),
                   Text(
@@ -253,11 +229,13 @@ Widget _buildMoments() {
                   SvgPicture.asset(
                     'assets/icons/bookmark.svg',
                     color: const Color(0xFFB1B1B1),
+                    height: globalSizeIcon,
                   ),
                   const SizedBox(width: globalSpacing),
                   SvgPicture.asset(
                     'assets/icons/shared.svg',
                     color: const Color(0xFFB1B1B1),
+                    height: globalSizeIcon,
                   ),
                 ],
               ),

@@ -1,4 +1,6 @@
 import 'package:appturista/models/user.dart';
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/presentation/widgets/bottom_navigation.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
@@ -47,38 +49,7 @@ class _HomeMessagesPageState extends State<HomeMessagesPage>
     with SingleTickerProviderStateMixin {
   late final TabController _tabController =
       TabController(length: 2, vsync: this);
-  List<BottomNavigationBarItem> bottomNavigation = [
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/home.svg'),
-      label: 'Inicio',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/moments.svg'),
-      label: 'Momentos',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/create.svg'),
-      label: 'Crear',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/reels.svg'),
-      label: 'Reels',
-    ),
-    BottomNavigationBarItem(
-      icon: Badge(
-        badgeContent: Text(
-          countNotification.toString(),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        child: SvgPicture.asset('assets/icons/messages.svg'),
-      ),
-      label: 'Mensajes',
-    ),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,10 +61,7 @@ class _HomeMessagesPageState extends State<HomeMessagesPage>
               toolbarHeight: AppBar().preferredSize.height + globalSpacing * 2,
               title: const Text('joselu123'),
               centerTitle: true,
-              leading: IconButton(
-                onPressed: () => Navigator.pop(context),
-                icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-              ),
+              leading: buildBackButton(context),
               bottom: TabBar(
                 padding: const EdgeInsets.all(globalSpacing),
                 controller: _tabController,
@@ -156,6 +124,7 @@ class _HomeMessagesPageState extends State<HomeMessagesPage>
                         icon: SvgPicture.asset(
                           'assets/icons/search.svg',
                           color: const Color(0xFF939393),
+                          height: globalSizeIcon,
                         ),
                       )
                     ],
@@ -173,14 +142,7 @@ class _HomeMessagesPageState extends State<HomeMessagesPage>
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: bottomNavigation,
-        elevation: 0,
-        backgroundColor: Colors.white,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+      bottomNavigationBar: const BottomNavigation(currentIndex: 4),
     );
   }
 }

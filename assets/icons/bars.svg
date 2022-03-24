@@ -1,27 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
-  <defs>
-    <clipPath id="clip-path">
-      <path id="Combined_Shape" data-name="Combined Shape" d="M1.143,14A1.079,1.079,0,0,1,0,13a1.079,1.079,0,0,1,1.143-1H21.714a1.079,1.079,0,0,1,1.143,1,1.079,1.079,0,0,1-1.143,1Zm0-6A1.079,1.079,0,0,1,0,7,1.078,1.078,0,0,1,1.143,6H21.714a1.078,1.078,0,0,1,1.143,1,1.079,1.079,0,0,1-1.143,1Zm0-6A1.078,1.078,0,0,1,0,1,1.078,1.078,0,0,1,1.143,0H21.714a1.078,1.078,0,0,1,1.143,1,1.078,1.078,0,0,1-1.143,1Z" fill="#242825"/>
-    </clipPath>
-    <filter id="_Icon_Color" x="-59.289" y="-40" width="147.428" height="144" filterUnits="userSpaceOnUse">
-      <feOffset dy="18" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="20" result="blur"/>
-      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Grupo_20774" data-name="Grupo 20774" transform="translate(1912 4292)">
-    <g id="Icon_menu" data-name="Icon / menu" transform="translate(-1909.003 -4287)">
-      <g id="Grupo_169" data-name="Grupo 169" transform="translate(0 2)">
-        <path id="Combined_Shape-2" data-name="Combined Shape" d="M1.143,14A1.079,1.079,0,0,1,0,13a1.079,1.079,0,0,1,1.143-1H21.714a1.079,1.079,0,0,1,1.143,1,1.079,1.079,0,0,1-1.143,1Zm0-6A1.079,1.079,0,0,1,0,7,1.078,1.078,0,0,1,1.143,6H21.714a1.078,1.078,0,0,1,1.143,1,1.079,1.079,0,0,1-1.143,1Zm0-6A1.078,1.078,0,0,1,0,1,1.078,1.078,0,0,1,1.143,0H21.714a1.078,1.078,0,0,1,1.143,1,1.078,1.078,0,0,1-1.143,1Z" fill="#242825"/>
-        <g id="Enmascarar_grupo_169" data-name="Enmascarar grupo 169" clip-path="url(#clip-path)">
-          <g transform="matrix(1, 0, 0, 1, -3, -7)" filter="url(#_Icon_Color)">
-            <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="27.428" height="24" transform="translate(0.71 2)" fill="#242825"/>
-          </g>
-        </g>
-      </g>
-    </g>
-    <rect id="Rectángulo_3615" data-name="Rectángulo 3615" width="28" height="28" transform="translate(-1912 -4292)" fill="none"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <path d="m15.001 90.625a4.7207 4.7207 0 0 1-5.0007-4.375 4.7207 4.7207 0 0 1 5.0007-4.375h89.999a4.7207 4.7207 0 0 1 5.0007 4.375 4.7207 4.7207 0 0 1-5.0007 4.375zm0-26.25a4.7207 4.7207 0 0 1-5.0007-4.375 4.7163 4.7163 0 0 1 5.0007-4.375h89.999a4.7163 4.7163 0 0 1 5.0007 4.375 4.7207 4.7207 0 0 1-5.0007 4.375zm0-26.25a4.7163 4.7163 0 0 1-5.0007-4.375 4.7163 4.7163 0 0 1 5.0007-4.375h89.999a4.7163 4.7163 0 0 1 5.0007 4.375 4.7163 4.7163 0 0 1-5.0007 4.375z" fill="#242825" stroke-width="4.375" data-name="Combined Shape"/>
 </svg>

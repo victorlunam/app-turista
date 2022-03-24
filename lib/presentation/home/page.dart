@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:appturista/presentation/widgets/appbar_actions.dart';
 import 'package:appturista/presentation/widgets/bottom_navigation.dart';
-import 'package:appturista/presentation/widgets/section.dart';
+import 'package:appturista/presentation/home/widgets/section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

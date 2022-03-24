@@ -46,6 +46,7 @@ class ProfileReels extends StatelessWidget {
                   SvgPicture.asset(
                     'assets/icons/play_triangle.svg',
                     color: Colors.white,
+                    height: globalSizeIcon,
                   ),
                   const Text(
                     '152',

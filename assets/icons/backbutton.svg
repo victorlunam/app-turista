@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
-  <g id="Grupo_2011" data-name="Grupo 2011" transform="translate(-10 -43)">
-    <rect id="Rectángulo_350" data-name="Rectángulo 350" width="29" height="29" transform="translate(10 43)" fill="#fff"/>
-    <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z" transform="translate(6.498 39.188)" fill="#0a0a0a"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <path d="m81.425 110c-1.8277 0-3.6562-0.69755-5.0491-2.0926l-42.857-42.857c-2.7902-2.7902-2.7902-7.3103 0-10.1l42.857-42.857c2.7902-2.7902 7.3103-2.7902 10.1 0 2.7902 2.7902 2.7902 7.3103 0 10.1l-37.808 37.807 37.812 37.813c2.7902 2.7902 2.7902 7.3103 0 10.1-1.3951 1.3951-3.2254 2.087-5.0558 2.087z" stroke-width=".22321"/>
 </svg>

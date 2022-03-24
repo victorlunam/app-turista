@@ -106,7 +106,10 @@ class _PickerPageState extends State<PickerPage>
         centerTitle: true,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/close_flat.svg'),
+          icon: SvgPicture.asset(
+            'assets/icons/close_flat.svg',
+            height: globalSizeIcon,
+          ),
         ),
         bottom: TabBar(
           padding: const EdgeInsets.fromLTRB(
@@ -121,7 +124,7 @@ class _PickerPageState extends State<PickerPage>
             Tab(
               icon: SvgPicture.asset(
                 'assets/icons/moments.svg',
-                height: 25,
+                height: globalSizeIcon,
                 color:
                     _indexTabBar != 0 ? const Color(0xFF939393) : Colors.black,
               ),
@@ -129,7 +132,7 @@ class _PickerPageState extends State<PickerPage>
             Tab(
               icon: SvgPicture.asset(
                 'assets/icons/play.svg',
-                height: 25,
+                height: globalSizeIcon,
                 color:
                     _indexTabBar != 1 ? const Color(0xFF939393) : Colors.black,
               ),

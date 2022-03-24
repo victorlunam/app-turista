@@ -1,6 +1,6 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 List<Map<String, dynamic>> followings = [
   {
@@ -99,10 +99,7 @@ class _LikesPageState extends State<LikesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         title: const Text('Me gusta'),
         centerTitle: true,
       ),

@@ -1,3 +1,4 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -132,19 +133,17 @@ class _CommentsPageState extends State<CommentsPage> {
                       ),
                     ),
                     const Expanded(child: SizedBox()),
-                    IconButton(
-                      onPressed: () {},
-                      alignment: Alignment.centerRight,
-                      padding: EdgeInsets.zero,
-                      icon: comment['liked']
+                    InkWell(
+                      onTap: () {},
+                      child: comment['liked']
                           ? SvgPicture.asset(
                               'assets/icons/favorite_filled.svg',
-                              height: 14,
+                              height: globalSizeIconSmall,
                               color: const Color(0xFFFF2953),
                             )
                           : SvgPicture.asset(
                               'assets/icons/favorite.svg',
-                              height: 14,
+                              height: globalSizeIconSmall,
                               color: const Color(0xFFB1B1B1),
                             ),
                     )
@@ -225,10 +224,7 @@ class _CommentsPageState extends State<CommentsPage> {
       appBar: AppBar(
         title: const Text('Comentarios'),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,

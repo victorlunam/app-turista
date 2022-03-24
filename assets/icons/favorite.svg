@@ -1,4 +1,5 @@
-<svg id="Componente_108_18" data-name="Componente 108 – 18" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path id="Icon_ionic-ios-heart" data-name="Icon ionic-ios-heart" d="M17.99,3.937h-.048a5.47,5.47,0,0,0-4.567,2.5,5.47,5.47,0,0,0-4.567-2.5H8.76A5.436,5.436,0,0,0,3.375,9.37a11.7,11.7,0,0,0,2.3,6.38,40.273,40.273,0,0,0,7.7,7.418,40.273,40.273,0,0,0,7.7-7.418,11.7,11.7,0,0,0,2.3-6.38A5.436,5.436,0,0,0,17.99,3.937Z" transform="translate(-1.875 -1.438)" fill="none" stroke="#fff" stroke-width="2"/>
-  <rect id="Rectángulo_3620" data-name="Rectángulo 3620" width="24" height="24" fill="none"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <path d="m80.977 15.746h-0.21818a24.864 24.864 0 0 0-20.759 11.364 24.864 24.864 0 0 0-20.759-11.364h-0.21818a24.709 24.709 0 0 0-24.477 24.695 53.182 53.182 0 0 0 10.455 29 183.06 183.06 0 0 0 35 33.718 183.06 183.06 0 0 0 35-33.718 53.182 53.182 0 0 0 10.455-29 24.709 24.709 0 0 0-24.477-24.695z" fill="none" stroke="#fff" stroke-width="9.0909" data-name="Icon ionic-ios-heart"/>
 </svg>

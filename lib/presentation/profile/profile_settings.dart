@@ -1,3 +1,5 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -10,10 +12,7 @@ class ProfileSettingsPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Ajustes'),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       body: ListView(
         children: [
@@ -26,13 +25,19 @@ class ProfileSettingsPage extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: SvgPicture.asset('assets/icons/user.svg'),
+            leading: SvgPicture.asset(
+              'assets/icons/user.svg',
+              height: globalSizeIcon,
+            ),
             title: const Text('Datos de Cuenta'),
             onTap: () =>
                 Navigator.pushNamed(context, '/profile/settings/accountData'),
           ),
           ListTile(
-            leading: SvgPicture.asset('assets/icons/card_user.svg'),
+            leading: SvgPicture.asset(
+              'assets/icons/card_user.svg',
+              height: globalSizeIcon,
+            ),
             title: const Text('Datos Personales'),
             onTap: () => Navigator.pushNamed(
                 context, '/profile/settings/personalInformation'),
@@ -47,7 +52,10 @@ class ProfileSettingsPage extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: SvgPicture.asset('assets/icons/bell.svg'),
+            leading: SvgPicture.asset(
+              'assets/icons/bell.svg',
+              height: globalSizeIcon,
+            ),
             title: const Text('Notificaciones'),
             onTap: () =>
                 Navigator.pushNamed(context, '/settings/notifications'),
@@ -62,13 +70,19 @@ class ProfileSettingsPage extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: SvgPicture.asset('assets/icons/clock.svg'),
+            leading: SvgPicture.asset(
+              'assets/icons/clock.svg',
+              height: globalSizeIcon,
+            ),
             title: const Text('Preguntas Frecuentes'),
             onTap: () =>
                 Navigator.pushNamed(context, '/settings/frequentQuestions'),
           ),
           ListTile(
-            leading: SvgPicture.asset('assets/icons/book_open.svg'),
+            leading: SvgPicture.asset(
+              'assets/icons/book_open.svg',
+              height: globalSizeIcon,
+            ),
             title: const Text('Acerca De'),
             onTap: () => Navigator.pushNamed(context, '/about'),
           ),

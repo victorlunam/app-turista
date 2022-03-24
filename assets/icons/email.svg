@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 30 24">
-  <path id="Icon_material-email" data-name="Icon material-email" d="M30,6H6A3,3,0,0,0,3.015,9L3,27a3.009,3.009,0,0,0,3,3H30a3.009,3.009,0,0,0,3-3V9A3.009,3.009,0,0,0,30,6Zm0,6L18,19.5,6,12V9l12,7.5L30,9Z" transform="translate(-3 -6)"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <path id="Icon_material-email" d="m100 20h-80a10 10 0 0 0-9.95 10l-0.05 60a10.03 10.03 0 0 0 10 10h80a10.03 10.03 0 0 0 10-10v-60a10.03 10.03 0 0 0-10-10zm0 20-40 25-40-25v-10l40 25 40-25z" stroke-width="3.3333" data-name="Icon material-email"/>
 </svg>

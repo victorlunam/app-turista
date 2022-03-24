@@ -1,3 +1,4 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,7 +18,7 @@ class _RecoverUpdatePasswordPageState extends State<RecoverUpdatePasswordPage> {
 
   openAlertBox() => showDialog(
         context: context,
-        barrierColor: const Color(0xFF707070),
+        barrierColor: const Color(0x66707070),
         barrierDismissible: false,
         builder: (BuildContext ctx) => AlertDialog(
           titlePadding: const EdgeInsets.symmetric(vertical: globalSpacing * 3),
@@ -29,7 +30,10 @@ class _RecoverUpdatePasswordPageState extends State<RecoverUpdatePasswordPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text('Contraseña Actualizada '),
-              SvgPicture.asset('assets/icons/check.svg')
+              SvgPicture.asset(
+                'assets/icons/check.svg',
+                height: globalSizeIcon,
+              )
             ],
           ),
           actionsAlignment: MainAxisAlignment.center,
@@ -62,10 +66,7 @@ class _RecoverUpdatePasswordPageState extends State<RecoverUpdatePasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(

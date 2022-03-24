@@ -1,25 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
-  <defs>
-    <clipPath id="clip-path">
-      <path id="Combined_Shape" data-name="Combined Shape" d="M8.788,21.751a10,10,0,0,1-7.221-6.418,1,1,0,0,1,1.885-.667,8,8,0,0,0,13.223,2.965L19.475,15H16a1,1,0,0,1,0-2h6a1,1,0,0,1,.928.625l0,.013A1,1,0,0,1,23,14v6a1,1,0,0,1-2,0V16.312l-2.932,2.755a10,10,0,0,1-9.28,2.685ZM1,9a1,1,0,0,1-.927-.626L.068,8.36A1.018,1.018,0,0,1,0,8V2A1,1,0,0,1,2,2V5.686L4.933,2.931a10,10,0,0,1,16.5,3.733,1,1,0,1,1-1.885.667A8,8,0,0,0,6.325,4.367L3.524,7H7A1,1,0,0,1,7,9Z" transform="translate(0 1)" fill="#fff"/>
-    </clipPath>
-    <filter id="_Icon_Color" x="-57.5" y="-39.999" width="144" height="144" filterUnits="userSpaceOnUse">
-      <feOffset dy="18" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="20" result="blur"/>
-      <feFlood flood-color="#6b67d2" flood-opacity="0.349"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Grupo_20730" data-name="Grupo 20730" transform="translate(-379 -1823)">
-    <g id="Grupo_20701" data-name="Grupo 20701" transform="translate(381.5 1825.001)">
-      <path id="Combined_Shape-2" data-name="Combined Shape" d="M8.788,21.751a10,10,0,0,1-7.221-6.418,1,1,0,0,1,1.885-.667,8,8,0,0,0,13.223,2.965L19.475,15H16a1,1,0,0,1,0-2h6a1,1,0,0,1,.928.625l0,.013A1,1,0,0,1,23,14v6a1,1,0,0,1-2,0V16.312l-2.932,2.755a10,10,0,0,1-9.28,2.685ZM1,9a1,1,0,0,1-.927-.626L.068,8.36A1.018,1.018,0,0,1,0,8V2A1,1,0,0,1,2,2V5.686L4.933,2.931a10,10,0,0,1,16.5,3.733,1,1,0,1,1-1.885.667A8,8,0,0,0,6.325,4.367L3.524,7H7A1,1,0,0,1,7,9Z" transform="translate(0 1)" fill="#fff"/>
-      <g id="Enmascarar_grupo_171" data-name="Enmascarar grupo 171" clip-path="url(#clip-path)">
-        <g transform="matrix(1, 0, 0, 1, -2.5, -2)" filter="url(#_Icon_Color)">
-          <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="24" height="24" transform="translate(2.5 2)" fill="#fff"/>
-        </g>
-      </g>
-    </g>
-    <rect id="Rectángulo_3598" data-name="Rectángulo 3598" width="28" height="28" transform="translate(379 1823)" fill="none"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-path-3-4">
+   <path transform="translate(0,1)" d="m8.788 21.751a10 10 0 0 1-7.221-6.418 1 1 0 0 1 1.885-0.667 8 8 0 0 0 13.223 2.965l2.8-2.631h-3.475a1 1 0 0 1 0-2h6a1 1 0 0 1 0.928 0.625v0.013a1 1 0 0 1 0.072 0.362v6a1 1 0 0 1-2 0v-3.688l-2.932 2.755a10 10 0 0 1-9.28 2.685zm-7.788-12.751a1 1 0 0 1-0.927-0.626l-5e-3 -0.014a1.018 1.018 0 0 1-0.068-0.36v-6a1 1 0 0 1 2 0v3.686l2.933-2.755a10 10 0 0 1 16.5 3.733 1 1 0 1 1-1.885 0.667 8 8 0 0 0-13.223-2.964l-2.801 2.633h3.476a1 1 0 0 1 0 2z" fill="#fff" data-name="Combined Shape"/>
+  </clipPath>
+  <filter id="_Icon_Color-01-7" x="-57.5" y="-39.999" width="144" height="144" filterUnits="userSpaceOnUse">
+   <feOffset dy="18" input="SourceAlpha"/>
+   <feGaussianBlur result="blur" stdDeviation="20"/>
+   <feFlood flood-color="#6b67d2" flood-opacity=".349"/>
+   <feComposite in2="blur" operator="in" result="result1"/>
+   <feComposite in="SourceGraphic" in2="result1"/>
+  </filter>
+ </defs>
+ <g transform="matrix(4.3478 0 0 4.3478 10 7.829)" data-name="Grupo 20701">
+  <path transform="translate(0,1)" d="m8.788 21.751a10 10 0 0 1-7.221-6.418 1 1 0 0 1 1.885-0.667 8 8 0 0 0 13.223 2.965l2.8-2.631h-3.475a1 1 0 0 1 0-2h6a1 1 0 0 1 0.928 0.625v0.013a1 1 0 0 1 0.072 0.362v6a1 1 0 0 1-2 0v-3.688l-2.932 2.755a10 10 0 0 1-9.28 2.685zm-7.788-12.751a1 1 0 0 1-0.927-0.626l-5e-3 -0.014a1.018 1.018 0 0 1-0.068-0.36v-6a1 1 0 0 1 2 0v3.686l2.933-2.755a10 10 0 0 1 16.5 3.733 1 1 0 1 1-1.885 0.667 8 8 0 0 0-13.223-2.964l-2.801 2.633h3.476a1 1 0 0 1 0 2z" fill="#fff" data-name="Combined Shape"/>
+  <g clip-path="url(#clip-path-3-4)" data-name="Enmascarar grupo 171">
+   <g transform="translate(-2.5,-2)" filter="url(#_Icon_Color-01-7)">
+    <rect transform="translate(2.5,2)" width="24" height="24" fill="#fff" data-name="↳ Icon Color"/>
+   </g>
   </g>
+ </g>
 </svg>

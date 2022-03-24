@@ -26,6 +26,7 @@ class SearchBar extends StatelessWidget {
             icon: SvgPicture.asset(
               'assets/icons/search.svg',
               color: const Color(0xFF939393),
+              height: globalSizeIcon,
             ),
           )
         ],

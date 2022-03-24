@@ -1,7 +1,5 @@
-<svg id="MDI_card-account-details" data-name="MDI / card-account-details" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g id="Boundary" fill="#515c6f" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0">
-    <rect width="24" height="24" stroke="none"/>
-    <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
-  </g>
-  <path id="Path_card-account-details" data-name="Path / card-account-details" d="M1.889,3H20.778a1.959,1.959,0,0,1,1.889,1.889V18.111A1.959,1.959,0,0,1,20.778,20H1.889A1.959,1.959,0,0,1,0,18.111V4.889A1.959,1.959,0,0,1,1.889,3M13.222,5.833v.944h7.556V5.833H13.222m0,1.889v.944h7.556V7.722H13.222m0,1.889v.944h6.611V9.611H13.222M7.556,13.3c-1.889,0-5.667,1.029-5.667,2.918v.944H13.222v-.944c0-1.889-3.778-2.918-5.667-2.918m0-7.471a2.833,2.833,0,1,0,2.833,2.833A2.833,2.833,0,0,0,7.556,5.833Z" transform="translate(0.955 0.29)" fill="#222423"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <path id="Path_card-account-details" d="m18.334 22.501h83.333a8.6425 8.6425 0 0 1 8.3337 8.3337v58.331a8.6425 8.6425 0 0 1-8.3337 8.3337h-83.333a8.6425 8.6425 0 0 1-8.3337-8.3337v-58.331a8.6425 8.6425 0 0 1 8.3337-8.3337m49.998 12.498v4.1646h33.335v-4.1646h-33.335m0 8.3337v4.1646h33.335v-4.1646h-33.335m0 8.3337v4.1646h29.166v-4.1646h-29.166m-24.997 16.275c-8.3337 0-25.001 4.5396-25.001 12.873v4.1646h49.998v-4.1646c0-8.3337-16.667-12.873-25.001-12.873m0-32.96a12.498 12.498 0 1 0 12.498 12.498 12.498 12.498 0 0 0-12.494-12.481z" fill="#222423" stroke-width="4.4117" data-name="Path / card-account-details"/>
 </svg>

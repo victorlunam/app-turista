@@ -1,3 +1,5 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -17,10 +19,7 @@ class _MomentVisibilityPageState extends State<MomentVisibilityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         title: const Text('Mostrar A'),
         centerTitle: true,
       ),
@@ -35,7 +34,7 @@ class _MomentVisibilityPageState extends State<MomentVisibilityPage> {
                 child: SvgPicture.asset(
                   'assets/icons/globe.svg',
                   color: Colors.black,
-                  height: 20,
+                  height: globalSizeIcon,
                 ),
               ),
             ),
@@ -56,7 +55,7 @@ class _MomentVisibilityPageState extends State<MomentVisibilityPage> {
                 child: SvgPicture.asset(
                   'assets/icons/users.svg',
                   color: Colors.black,
-                  height: 20,
+                  height: globalSizeIcon,
                 ),
               ),
             ),
@@ -77,7 +76,7 @@ class _MomentVisibilityPageState extends State<MomentVisibilityPage> {
                 child: SvgPicture.asset(
                   'assets/icons/look.svg',
                   color: Colors.black,
-                  height: 20,
+                  height: globalSizeIcon,
                 ),
               ),
             ),

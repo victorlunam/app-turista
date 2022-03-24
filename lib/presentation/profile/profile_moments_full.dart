@@ -70,18 +70,26 @@ class ProfileMomentsFull extends StatelessWidget {
                             momentsList[index]['username'],
                             style: Theme.of(context).textTheme.subtitle1,
                           ),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                'assets/icons/pin_map.svg',
-                                color: const Color(0xFFB1B1B1),
-                              ),
-                              const SizedBox(width: globalSpacing / 2),
-                              Text(
-                                momentsList[index]['place'],
-                                style: Theme.of(context).textTheme.subtitle2,
-                              )
-                            ],
+                          InkWell(
+                            onTap: () => Navigator.pushNamed(
+                              context,
+                              '/search/view',
+                              arguments: momentsList[index]['place'],
+                            ),
+                            child: Row(
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/icons/pin_map.svg',
+                                  color: const Color(0xFFB1B1B1),
+                                  height: globalSizeIcon,
+                                ),
+                                const SizedBox(width: globalSpacing / 2),
+                                Text(
+                                  momentsList[index]['place'],
+                                  style: Theme.of(context).textTheme.subtitle2,
+                                )
+                              ],
+                            ),
                           )
                         ],
                       ),
@@ -96,6 +104,7 @@ class ProfileMomentsFull extends StatelessWidget {
                       SvgPicture.asset(
                         'assets/icons/dots.svg',
                         color: const Color(0xFFB1B1B1),
+                        height: globalSizeIcon,
                       ),
                     ],
                   ),
@@ -134,6 +143,7 @@ class ProfileMomentsFull extends StatelessWidget {
                       SvgPicture.asset(
                         'assets/icons/favorite_filled.svg',
                         color: const Color(0xFFFF2953),
+                        height: globalSizeIcon,
                       ),
                       const SizedBox(width: globalSpacing / 2),
                       Text(
@@ -146,6 +156,7 @@ class ProfileMomentsFull extends StatelessWidget {
                       SvgPicture.asset(
                         'assets/icons/messages.svg',
                         color: const Color(0xFFB1B1B1),
+                        height: globalSizeIcon,
                       ),
                       const SizedBox(width: globalSpacing / 2),
                       Text(
@@ -158,11 +169,13 @@ class ProfileMomentsFull extends StatelessWidget {
                       SvgPicture.asset(
                         'assets/icons/bookmark.svg',
                         color: const Color(0xFFB1B1B1),
+                        height: globalSizeIcon,
                       ),
                       const SizedBox(width: globalSpacing),
                       SvgPicture.asset(
                         'assets/icons/shared.svg',
                         color: const Color(0xFFB1B1B1),
+                        height: globalSizeIcon,
                       ),
                     ],
                   ),

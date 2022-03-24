@@ -1,3 +1,4 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -83,6 +84,7 @@ class _SearchViewPageState extends State<SearchViewPage>
                         SvgPicture.asset(
                           'assets/icons/play_triangle.svg',
                           color: Colors.white,
+                          height: globalSizeIcon,
                         ),
                         const Text(
                           '152',
@@ -106,10 +108,7 @@ class _SearchViewPageState extends State<SearchViewPage>
       appBar: AppBar(
         title: Text(widget.title),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         bottom: TabBar(
           padding: const EdgeInsets.fromLTRB(
               globalSpacing, 0, globalSpacing, globalSpacing),
@@ -123,7 +122,7 @@ class _SearchViewPageState extends State<SearchViewPage>
             Tab(
               icon: SvgPicture.asset(
                 'assets/icons/moments.svg',
-                height: 25,
+                height: globalSizeIcon,
                 color:
                     _indexTabBar != 0 ? const Color(0xFF939393) : Colors.black,
               ),
@@ -131,7 +130,7 @@ class _SearchViewPageState extends State<SearchViewPage>
             Tab(
               icon: SvgPicture.asset(
                 'assets/icons/play.svg',
-                height: 25,
+                height: globalSizeIcon,
                 color:
                     _indexTabBar != 1 ? const Color(0xFF939393) : Colors.black,
               ),

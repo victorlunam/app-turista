@@ -1,5 +1,5 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 List<Map<String, String>> preferences = [
   {'path': 'assets/icons/food.png', 'name': 'Comida', 'value': 'food'},
@@ -26,10 +26,7 @@ class _ProfileSettingsAccountDataState
       appBar: AppBar(
         title: const Text('Datos de Cuenta'),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       body: ListView(
         shrinkWrap: true,

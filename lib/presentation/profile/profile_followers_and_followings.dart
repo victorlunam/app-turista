@@ -1,8 +1,9 @@
 import 'package:appturista/presentation/profile/widgets/profile_followers.dart';
 import 'package:appturista/presentation/profile/widgets/profile_followings.dart';
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/presentation/widgets/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:badges/badges.dart';
 import 'package:appturista/utils/global_variables.dart';
 
 int countNotification = 2;
@@ -24,39 +25,6 @@ class _ProfileFollowersAndFollowingsPageState
   late final TabController _tabController =
       TabController(length: 2, vsync: this, initialIndex: widget.indexTab);
 
-  List<BottomNavigationBarItem> bottomNavigation = [
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/home.svg'),
-      label: 'Inicio',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/moments.svg'),
-      label: 'Momentos',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/create.svg'),
-      label: 'Crear',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/reels.svg'),
-      label: 'Reels',
-    ),
-    BottomNavigationBarItem(
-      icon: Badge(
-        badgeContent: Text(
-          countNotification.toString(),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        child: SvgPicture.asset('assets/icons/messages.svg'),
-      ),
-      label: 'Mensajes',
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,10 +39,7 @@ class _ProfileFollowersAndFollowingsPageState
                 toolbarHeight: AppBar().preferredSize.height * 1.5,
                 title: const Text('Joselu124'),
                 centerTitle: true,
-                leading: IconButton(
-                  onPressed: () => Navigator.pop(context),
-                  icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-                ),
+                leading: buildBackButton(context),
                 bottom: TabBar(
                   padding: const EdgeInsets.all(globalSpacing),
                   controller: _tabController,
@@ -134,6 +99,7 @@ class _ProfileFollowersAndFollowingsPageState
                           icon: SvgPicture.asset(
                             'assets/icons/search.svg',
                             color: const Color(0xFF939393),
+                            height: globalSizeIcon,
                           ),
                         )
                       ],
@@ -149,14 +115,7 @@ class _ProfileFollowersAndFollowingsPageState
           ]),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: bottomNavigation,
-        elevation: 0,
-        backgroundColor: Colors.white,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+      bottomNavigationBar: const BottomNavigation(currentIndex: 0),
     );
   }
 }

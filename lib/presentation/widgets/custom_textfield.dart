@@ -1,3 +1,4 @@
+import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -69,8 +70,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
             : IconButton(
                 onPressed: () => _toggle(),
                 icon: _obscureText
-                    ? SvgPicture.asset('assets/icons/visibility.svg')
-                    : SvgPicture.asset('assets/icons/visibility_off.svg'),
+                    ? SvgPicture.asset(
+                        'assets/icons/visibility.svg',
+                        height: globalSizeIcon,
+                      )
+                    : SvgPicture.asset(
+                        'assets/icons/visibility_off.svg',
+                        height: globalSizeIcon,
+                      ),
               ),
         label: Text(
           widget.label,

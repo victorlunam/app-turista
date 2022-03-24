@@ -1,3 +1,4 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -27,10 +28,7 @@ class SearchLocationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         title: const Text('Agregar Lugar'),
         centerTitle: true,
         bottom: PreferredSize(
@@ -55,7 +53,10 @@ class SearchLocationPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: globalSpacing),
-                SvgPicture.asset('assets/icons/search.svg'),
+                SvgPicture.asset(
+                  'assets/icons/search.svg',
+                  height: globalSizeIcon,
+                ),
               ],
             ),
           ),
@@ -75,7 +76,7 @@ class SearchLocationPage extends StatelessWidget {
                 child: SvgPicture.asset(
                   'assets/icons/pin_map.svg',
                   color: Colors.black,
-                  height: 20,
+                  height: globalSizeIcon,
                 ),
               ),
             ),

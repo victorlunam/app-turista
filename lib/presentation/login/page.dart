@@ -1,3 +1,5 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:appturista/presentation/widgets/custom_textfield.dart';
@@ -17,10 +19,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -88,11 +87,17 @@ class _SignInPageState extends State<SignInPage> {
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: SvgPicture.asset('assets/icons/facebook_color.svg'),
+                    icon: SvgPicture.asset(
+                      'assets/icons/facebook_color.svg',
+                      height: globalSizeIcon,
+                    ),
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: SvgPicture.asset('assets/icons/google.svg'),
+                    icon: SvgPicture.asset(
+                      'assets/icons/google.svg',
+                      height: globalSizeIcon,
+                    ),
                   ),
                 ],
               ),

@@ -70,18 +70,26 @@ class _MomentsState extends State<Moments> {
                           widget.list[index]['username'],
                           style: Theme.of(context).textTheme.subtitle1,
                         ),
-                        Row(
-                          children: [
-                            SvgPicture.asset(
-                              'assets/icons/pin_map.svg',
-                              color: const Color(0xFFB1B1B1),
-                            ),
-                            const SizedBox(width: globalSpacing / 2),
-                            Text(
-                              widget.list[index]['place'],
-                              style: Theme.of(context).textTheme.subtitle2,
-                            )
-                          ],
+                        InkWell(
+                          onTap: () => Navigator.pushNamed(
+                            context,
+                            '/search/view',
+                            arguments: widget.list[index]['place'],
+                          ),
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/pin_map.svg',
+                                color: const Color(0xFFB1B1B1),
+                                height: globalSizeIcon,
+                              ),
+                              const SizedBox(width: globalSpacing / 2),
+                              Text(
+                                widget.list[index]['place'],
+                                style: Theme.of(context).textTheme.subtitle2,
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -96,6 +104,7 @@ class _MomentsState extends State<Moments> {
                     SvgPicture.asset(
                       'assets/icons/dots.svg',
                       color: const Color(0xFFB1B1B1),
+                      height: globalSizeIcon,
                     ),
                   ],
                 ),
@@ -181,11 +190,13 @@ class _MomentsState extends State<Moments> {
                     SvgPicture.asset(
                       'assets/icons/bookmark.svg',
                       color: const Color(0xFFB1B1B1),
+                      height: globalSizeIcon,
                     ),
                     const SizedBox(width: globalSpacing),
                     SvgPicture.asset(
                       'assets/icons/shared.svg',
                       color: const Color(0xFFB1B1B1),
+                      height: globalSizeIcon,
                     ),
                   ],
                 ),

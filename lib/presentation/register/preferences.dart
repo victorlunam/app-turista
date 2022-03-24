@@ -1,3 +1,4 @@
+import 'package:appturista/utils/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -42,7 +43,10 @@ class _SignUpPreferencesPageState extends State<SignUpPreferencesPage> {
               '/home',
               arguments: 0,
             ),
-            icon: SvgPicture.asset('assets/icons/close.svg'),
+            icon: SvgPicture.asset(
+              'assets/icons/close.svg',
+              height: globalSizeIcon,
+            ),
           ),
         ],
         title: const Text(

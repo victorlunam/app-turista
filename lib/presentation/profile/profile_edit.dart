@@ -1,7 +1,8 @@
 import 'package:appturista/models/user.dart';
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
+import 'package:appturista/presentation/widgets/bottom_navigation.dart';
 import 'package:appturista/presentation/widgets/custom_textfield.dart';
 import 'package:appturista/utils/global_variables.dart';
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -24,40 +25,10 @@ class _ProfileEditState extends State<ProfileEdit> {
   late final List<Widget> actions = [
     IconButton(
       onPressed: () {},
-      icon: SvgPicture.asset('assets/icons/bars.svg'),
-    ),
-  ];
-
-  List<BottomNavigationBarItem> bottomNavigation = [
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/home.svg'),
-      label: 'Inicio',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/moments.svg'),
-      label: 'Momentos',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/create.svg'),
-      label: 'Crear',
-    ),
-    BottomNavigationBarItem(
-      icon: SvgPicture.asset('assets/icons/reels.svg'),
-      label: 'Reels',
-    ),
-    BottomNavigationBarItem(
-      icon: Badge(
-        badgeContent: Text(
-          countNotification.toString(),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        child: SvgPicture.asset('assets/icons/messages.svg'),
+      icon: SvgPicture.asset(
+        'assets/icons/bars.svg',
+        height: globalSizeIcon,
       ),
-      label: 'Mensajes',
     ),
   ];
 
@@ -67,10 +38,7 @@ class _ProfileEditState extends State<ProfileEdit> {
       appBar: AppBar(
         title: const Text('Editar perfil'),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
         actions: actions,
       ),
       body: SafeArea(
@@ -148,14 +116,7 @@ class _ProfileEditState extends State<ProfileEdit> {
               ),
             ),
           )),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: bottomNavigation,
-        elevation: 0,
-        backgroundColor: Colors.white,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+      bottomNavigationBar: const BottomNavigation(currentIndex: 0),
     );
   }
 }

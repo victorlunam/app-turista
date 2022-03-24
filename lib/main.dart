@@ -161,6 +161,7 @@ class MyApp extends StatelessWidget {
               return CameraViewPage(
                 path: (arg as CameraPageViewArguments).path,
                 user: arg.user,
+                isVideo: arg.isVideo,
               );
             },
             '/picker': (context) => const AlbumPageView(),
@@ -173,7 +174,10 @@ class MyApp extends StatelessWidget {
             '/moment/friends': (context) => const MomentsFriendsPage(),
           };
           WidgetBuilder? builder = routes[settings.name];
-          return MaterialPageRoute(builder: (ctx) => builder!(ctx));
+          return MaterialPageRoute(
+            settings: RouteSettings(name: settings.name),
+            builder: (ctx) => builder!(ctx),
+          );
         },
       ),
     );

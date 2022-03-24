@@ -17,12 +17,18 @@ List<Widget> buildActions(BuildContext context) {
           ),
           textAlign: TextAlign.center,
         ),
-        child: SvgPicture.asset('assets/icons/bell.svg'),
+        child: SvgPicture.asset(
+          'assets/icons/bell.svg',
+          height: globalSizeIcon,
+        ),
       ),
     ),
     IconButton(
       onPressed: () => Navigator.pushNamed(context, '/search'),
-      icon: SvgPicture.asset('assets/icons/search.svg'),
+      icon: SvgPicture.asset(
+        'assets/icons/search.svg',
+        height: globalSizeIcon,
+      ),
     ),
     IconButton(
       onPressed: () => Navigator.pushNamed(
@@ -30,7 +36,10 @@ List<Widget> buildActions(BuildContext context) {
         '/profile',
         arguments: ProfilePageArguments(isOwner: true),
       ),
-      icon: SvgPicture.asset('assets/icons/user.svg'),
+      icon: SvgPicture.asset(
+        'assets/icons/user.svg',
+        height: globalSizeIcon,
+      ),
     ),
   ];
 }

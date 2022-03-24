@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
-  <g id="Grupo_20731" data-name="Grupo 20731" transform="translate(-434 -1824)">
-    <g id="Icon_feather-image" data-name="Icon feather-image" transform="translate(433.5 1823.5)">
-      <path id="Trazado_12353" data-name="Trazado 12353" d="M6.833,4.5H23.167A2.333,2.333,0,0,1,25.5,6.833V23.167A2.333,2.333,0,0,1,23.167,25.5H6.833A2.333,2.333,0,0,1,4.5,23.167V6.833A2.333,2.333,0,0,1,6.833,4.5Z" fill="none" stroke="#222423" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-      <path id="Trazado_12354" data-name="Trazado 12354" d="M15,12.75a2.25,2.25,0,1,1-2.25-2.25A2.25,2.25,0,0,1,15,12.75Z" transform="translate(-1.6 -1.6)" fill="none" stroke="#222423" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-      <path id="Trazado_12355" data-name="Trazado 12355" d="M25.5,22.5,19.875,15,7.5,31.5" transform="translate(0 -6)" fill="none" stroke="#222423" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-    </g>
-    <rect id="Rectángulo_3599" data-name="Rectángulo 3599" width="28" height="28" transform="translate(434 1824)" fill="none"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <g id="Icon_feather-image" transform="matrix(4.1667 0 0 4.1667 -2.5 -2.5)" fill="none" stroke="#222423" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" data-name="Icon feather-image">
+  <path d="m6.833 4.5h16.334a2.333 2.333 0 0 1 2.333 2.333v16.334a2.333 2.333 0 0 1-2.333 2.333h-16.334a2.333 2.333 0 0 1-2.333-2.333v-16.334a2.333 2.333 0 0 1 2.333-2.333z" data-name="Trazado 12353"/>
+  <path transform="translate(-1.6,-1.6)" d="m15 12.75a2.25 2.25 0 1 1-2.25-2.25 2.25 2.25 0 0 1 2.25 2.25z" data-name="Trazado 12354"/>
+  <path transform="translate(0,-6)" d="M 25.5,22.5 19.875,15 7.5,31.5" data-name="Trazado 12355"/>
+ </g>
 </svg>

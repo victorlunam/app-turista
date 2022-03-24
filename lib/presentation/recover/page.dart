@@ -1,5 +1,5 @@
+import 'package:appturista/presentation/widgets/appbar_backbutton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:appturista/presentation/widgets/custom_textfield.dart';
 
 class RecoverPage extends StatefulWidget {
@@ -17,10 +17,7 @@ class _RecoverPageState extends State<RecoverPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: SvgPicture.asset('assets/icons/backbutton.svg'),
-        ),
+        leading: buildBackButton(context),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(

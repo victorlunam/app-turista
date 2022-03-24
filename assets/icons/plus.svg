@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30.644" height="30.644" viewBox="0 0 30.644 30.644">
-  <g id="Icon_feather-plus" data-name="Icon feather-plus" transform="translate(-6 -6)">
-    <path id="Trazado_401" data-name="Trazado 401" d="M18,7.5V35.144" transform="translate(3.322)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-    <path id="Trazado_402" data-name="Trazado 402" d="M7.5,18H35.144" transform="translate(0 3.322)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <g id="Icon_feather-plus" transform="matrix(3.2633 0 0 3.2633 -9.5797 -9.5797)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" data-name="Icon feather-plus">
+  <path transform="translate(3.322)" d="m18 7.5v27.644" data-name="Trazado 401"/>
+  <path transform="translate(0,3.322)" d="m7.5 18h27.644" data-name="Trazado 402"/>
+ </g>
 </svg>
