@@ -1,16 +1,36 @@
-# appturista
+# App Turismo - Scaffold
+## Descripción:
 
-A new Flutter project.
+App Turismo es una red social de viajes que te ayuda a descubrir lugares increíbles, compartir tus experiencias y conectar con otros viajeros. Encuentra recomendaciones personalizadas, sube fotos, deja tips y crea reels para inspirar a la comunidad.
 
-## Getting Started
+## Características:
 
-This project is a starting point for a Flutter application.
+- Custom Media Picker: Selecciona fotos y videos de tu galería o captura nuevas directamente desde la app.
+- Acceso a la cámara: Comparte fotos y videos en tiempo real de tus viajes.
+- Perfil: Personaliza tu perfil con información sobre tus viajes favoritos, intereses y fotos.
+- Perfil de lugares: Descubre información detallada sobre lugares de interés, incluyendo fotos, opiniones y recomendaciones de otros viajeros.
+- Reels: Crea videos cortos y dinámicos para compartir tus experiencias de viaje.
+  
+## Tecnologías:
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter
+  
+## Inicialización del proyecto:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Clonar el repositorio:
+``` bash
+git clone https://github.com/usuario/app-turismo.git
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Instalar las dependencias:
+``` bash
+flutter pub get
+```
+
+### Ejecutar la aplicación:
+``` bash
+flutter run
+```
+## Recursos adicionales:
+
+Documentación de Flutter: https://flutter.dev/docs
