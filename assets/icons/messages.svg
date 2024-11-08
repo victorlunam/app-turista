@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-path-7">
+   <path id="Shape" transform="translate(0)" d="M1.1,22a1.1,1.1,0,0,1-.889-.462,1.083,1.083,0,0,1-.148-.987L2.007,14.7A10.25,10.25,0,0,1,1.1,10.449,10.458,10.458,0,0,1,11.526,0h.025l.61,0A10.444,10.444,0,0,1,22,9.9v.548A10.453,10.453,0,0,1,11.553,20.9h-.028A10.255,10.255,0,0,1,7.3,19.992L1.449,21.942A1.114,1.114,0,0,1,1.1,22ZM11.529,2.2A8.243,8.243,0,0,0,4.173,14.133a1.107,1.107,0,0,1,.061.843L2.841,19.159l4.182-1.394a1.093,1.093,0,0,1,.348-.057,1.108,1.108,0,0,1,.5.118,8.16,8.16,0,0,0,3.665.872h.019a8.251,8.251,0,0,0,7.378-4.565,8.154,8.154,0,0,0,.872-3.681l0-.492A8.244,8.244,0,0,0,17.412,4.6,8.124,8.124,0,0,0,12.1,2.2h-.571Z" fill="#939393"/>
+  </clipPath>
+  <filter id="_Icon_Color-4" x="-59.203" y="-41.201" width="146.4" height="146.4" filterUnits="userSpaceOnUse">
+   <feOffset dy="18" input="SourceAlpha"/>
+   <feGaussianBlur result="blur" stdDeviation="20"/>
+   <feFlood flood-color="#6b67d2" flood-opacity=".349"/>
+   <feComposite in2="blur" operator="in" result="result1"/>
+   <feComposite in="SourceGraphic" in2="result1"/>
+  </filter>
+ </defs>
+ <g id="Icon_message-circle" transform="matrix(4.5455 0 0 4.5455 9.9896 10)" data-name="Icon / message-circle">
+  <g data-name="Grupo 28">
+   <g clip-path="url(#clip-path-7)" data-name="Enmascarar grupo 28">
+    <g transform="translate(-3,-3)" filter="url(#_Icon_Color-4)">
+     <rect transform="translate(.8 .8)" width="26.398" height="26.398" fill="#939393" data-name="↳ Icon Color"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

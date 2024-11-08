@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <circle cx="60" cy="60" r="50" fill="#f1f1f1" stroke-width="3.0303" data-name="Elipse 139"/>
+ <g id="MDI_map-marker" transform="matrix(3.0303 0 0 3.0303 28.682 31.712)" stroke="#222423" data-name="MDI / map-marker">
+  <g id="Boundary" transform="translate(.835 .835)" fill="#5e5e5c" opacity="0">
+  </g>
+  <path id="Path_map-marker" transform="translate(-.83 -.288)" d="m10.737 9.786a2.049 2.049 0 1 1 2.049-2.049 2.049 2.049 0 0 1-2.049 2.049m0-7.786a5.737 5.737 0 0 0-5.737 5.737c0 4.3 5.737 10.655 5.737 10.655s5.737-6.352 5.737-10.655a5.737 5.737 0 0 0-5.737-5.737z" fill="none" stroke-width="1.5" data-name="Path / map-marker"/>
+ </g>
+</svg>

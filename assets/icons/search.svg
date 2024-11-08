@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-path-8">
+   <path d="M19.207,20.692l-4.76-4.761a8.934,8.934,0,1,1,1.485-1.485l4.761,4.76a1.05,1.05,0,0,1-1.486,1.486ZM2.1,8.924a6.822,6.822,0,0,0,11.612,4.861l.036-.038.038-.036A6.824,6.824,0,1,0,2.1,8.924Z" fill="#242825" data-name="Combined Shape"/>
+  </clipPath>
+  <filter id="_Icon_Color-86" x="-58.1" y="-40.601" width="145.2" height="145.2" filterUnits="userSpaceOnUse">
+   <feOffset dy="18" input="SourceAlpha"/>
+   <feGaussianBlur result="blur" stdDeviation="20"/>
+   <feFlood flood-color="#6b67d2" flood-opacity=".349"/>
+   <feComposite in2="blur" operator="in" result="result1"/>
+   <feComposite in="SourceGraphic" in2="result1"/>
+  </filter>
+ </defs>
+ <g id="Icon_search" transform="matrix(4.7577 0 0 4.7577 10.086 10.09)" data-name="Icon / search">
+  <g data-name="Grupo 8">
+   <path d="m19.207 20.692-4.76-4.761a8.934 8.934 0 1 1 1.485-1.485l4.761 4.76a1.0508 1.0508 0 0 1-1.486 1.486zm-17.107-11.768a6.822 6.822 0 0 0 11.612 4.861l0.036-0.038 0.038-0.036a6.824 6.824 0 1 0-11.686-4.787z" fill="#242825" data-name="Combined Shape"/>
+   <g clip-path="url(#clip-path-8)" data-name="Enmascarar grupo 8">
+    <g transform="translate(-4,-3.5)" filter="url(#_Icon_Color-86)">
+     <rect transform="translate(1.9,1.4)" width="25.2" height="25.2" fill="#242825" data-name="↳ Icon Color"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

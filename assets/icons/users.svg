@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-path-96">
+   <path transform="translate(0 2)" d="M23,20a1,1,0,0,1-1-1V17a3,3,0,0,0-2.25-2.9,1,1,0,1,1,.5-1.937A5,5,0,0,1,24,17v2A1,1,0,0,1,23,20Zm-6,0a1,1,0,0,1-1-1V17a3,3,0,0,0-3-3H5a3,3,0,0,0-3,3v2a1,1,0,0,1-2,0V17a5.006,5.006,0,0,1,5-5h8a5.006,5.006,0,0,1,5,5v2A1,1,0,0,1,17,20ZM9,10a5,5,0,1,1,5-5A5.006,5.006,0,0,1,9,10ZM9,2a3,3,0,1,0,3,3A3,3,0,0,0,9,2Zm7,7.88a1,1,0,0,1-.248-1.969,3,3,0,0,0,0-5.812,1,1,0,1,1,.5-1.938,5,5,0,0,1,0,9.688A.985.985,0,0,1,16,9.88Z" fill="#242825" data-name="Combined Shape"/>
+  </clipPath>
+  <filter id="_Icon_Color-80" x="-60" y="-44" width="144" height="144" filterUnits="userSpaceOnUse">
+   <feOffset dy="18" input="SourceAlpha"/>
+   <feGaussianBlur result="blur" stdDeviation="20"/>
+   <feFlood flood-color="#6b67d2" flood-opacity=".349"/>
+   <feComposite in2="blur" operator="in" result="result1"/>
+   <feComposite in="SourceGraphic" in2="result1"/>
+  </filter>
+ </defs>
+ <g transform="matrix(4.1667 0 0 4.1667 10 10)" data-name="Grupo 58">
+  <path transform="translate(0,2)" d="m23 20a1 1 0 0 1-1-1v-2a3 3 0 0 0-2.25-2.9 1.0002 1.0002 0 1 1 0.5-1.937 5 5 0 0 1 3.75 4.837v2a1 1 0 0 1-1 1zm-6 0a1 1 0 0 1-1-1v-2a3 3 0 0 0-3-3h-8a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5.006 5.006 0 0 1 5-5h8a5.006 5.006 0 0 1 5 5v2a1 1 0 0 1-1 1zm-8-10a5 5 0 1 1 5-5 5.006 5.006 0 0 1-5 5zm0-8a3 3 0 1 0 3 3 3 3 0 0 0-3-3zm7 7.88a1 1 0 0 1-0.248-1.969 3 3 0 0 0 0-5.812 1.0007 1.0007 0 1 1 0.5-1.938 5 5 0 0 1 0 9.688 0.985 0.985 0 0 1-0.252 0.031z" fill="#242825" data-name="Combined Shape"/>
+  <g clip-path="url(#clip-path-96)" data-name="Enmascarar grupo 58">
+   <g transform="translate(0,2)" filter="url(#_Icon_Color-80)">
+    <rect transform="translate(0,-2)" width="24" height="24" fill="#242825" data-name="↳ Icon Color"/>
+   </g>
+  </g>
+ </g>
+</svg>

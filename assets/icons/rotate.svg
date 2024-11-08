@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-path-3-4">
+   <path transform="translate(0,1)" d="m8.788 21.751a10 10 0 0 1-7.221-6.418 1 1 0 0 1 1.885-0.667 8 8 0 0 0 13.223 2.965l2.8-2.631h-3.475a1 1 0 0 1 0-2h6a1 1 0 0 1 0.928 0.625v0.013a1 1 0 0 1 0.072 0.362v6a1 1 0 0 1-2 0v-3.688l-2.932 2.755a10 10 0 0 1-9.28 2.685zm-7.788-12.751a1 1 0 0 1-0.927-0.626l-5e-3 -0.014a1.018 1.018 0 0 1-0.068-0.36v-6a1 1 0 0 1 2 0v3.686l2.933-2.755a10 10 0 0 1 16.5 3.733 1 1 0 1 1-1.885 0.667 8 8 0 0 0-13.223-2.964l-2.801 2.633h3.476a1 1 0 0 1 0 2z" fill="#fff" data-name="Combined Shape"/>
+  </clipPath>
+  <filter id="_Icon_Color-01-7" x="-57.5" y="-39.999" width="144" height="144" filterUnits="userSpaceOnUse">
+   <feOffset dy="18" input="SourceAlpha"/>
+   <feGaussianBlur result="blur" stdDeviation="20"/>
+   <feFlood flood-color="#6b67d2" flood-opacity=".349"/>
+   <feComposite in2="blur" operator="in" result="result1"/>
+   <feComposite in="SourceGraphic" in2="result1"/>
+  </filter>
+ </defs>
+ <g transform="matrix(4.3478 0 0 4.3478 10 7.829)" data-name="Grupo 20701">
+  <path transform="translate(0,1)" d="m8.788 21.751a10 10 0 0 1-7.221-6.418 1 1 0 0 1 1.885-0.667 8 8 0 0 0 13.223 2.965l2.8-2.631h-3.475a1 1 0 0 1 0-2h6a1 1 0 0 1 0.928 0.625v0.013a1 1 0 0 1 0.072 0.362v6a1 1 0 0 1-2 0v-3.688l-2.932 2.755a10 10 0 0 1-9.28 2.685zm-7.788-12.751a1 1 0 0 1-0.927-0.626l-5e-3 -0.014a1.018 1.018 0 0 1-0.068-0.36v-6a1 1 0 0 1 2 0v3.686l2.933-2.755a10 10 0 0 1 16.5 3.733 1 1 0 1 1-1.885 0.667 8 8 0 0 0-13.223-2.964l-2.801 2.633h3.476a1 1 0 0 1 0 2z" fill="#fff" data-name="Combined Shape"/>
+  <g clip-path="url(#clip-path-3-4)" data-name="Enmascarar grupo 171">
+   <g transform="translate(-2.5,-2)" filter="url(#_Icon_Color-01-7)">
+    <rect transform="translate(2.5,2)" width="24" height="24" fill="#fff" data-name="↳ Icon Color"/>
+   </g>
+  </g>
+ </g>
+</svg>

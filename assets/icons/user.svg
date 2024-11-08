@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-path-1">
+   <path transform="translate(0)" d="M17.85,21a1.051,1.051,0,0,1-1.05-1.05v-2.1A3.154,3.154,0,0,0,13.65,14.7H5.25A3.154,3.154,0,0,0,2.1,17.85v2.1a1.05,1.05,0,0,1-2.1,0v-2.1A5.256,5.256,0,0,1,5.25,12.6h8.4a5.256,5.256,0,0,1,5.25,5.25v2.1A1.051,1.051,0,0,1,17.85,21ZM9.45,10.5A5.25,5.25,0,1,1,14.7,5.25,5.256,5.256,0,0,1,9.45,10.5Zm0-8.4A3.15,3.15,0,1,0,12.6,5.25,3.154,3.154,0,0,0,9.45,2.1Z" fill="#242825" data-name="Combined Shape"/>
+  </clipPath>
+  <filter id="_Icon_Color-860" x="-58.6" y="-41.1" width="145.2" height="145.2" filterUnits="userSpaceOnUse">
+   <feOffset dy="18" input="SourceAlpha"/>
+   <feGaussianBlur result="blur" stdDeviation="20"/>
+   <feFlood flood-color="#6b67d2" flood-opacity=".349"/>
+   <feComposite in2="blur" operator="in" result="result1"/>
+   <feComposite in="SourceGraphic" in2="result1"/>
+  </filter>
+ </defs>
+ <g id="Icon_user" transform="matrix(4.7619 0 0 4.7619 15 10)" data-name="Icon / user">
+  <g data-name="Grupo 51">
+   <path d="m17.85 21a1.051 1.051 0 0 1-1.05-1.05v-2.1a3.154 3.154 0 0 0-3.15-3.15h-8.4a3.154 3.154 0 0 0-3.15 3.15v2.1a1.05 1.05 0 0 1-2.1 0v-2.1a5.256 5.256 0 0 1 5.25-5.25h8.4a5.256 5.256 0 0 1 5.25 5.25v2.1a1.051 1.051 0 0 1-1.05 1.05zm-8.4-10.5a5.25 5.25 0 1 1 5.25-5.25 5.256 5.256 0 0 1-5.25 5.25zm0-8.4a3.15 3.15 0 1 0 3.15 3.15 3.154 3.154 0 0 0-3.15-3.15z" fill="#242825" data-name="Combined Shape"/>
+   <g clip-path="url(#clip-path-1)" data-name="Enmascarar grupo 51">
+    <g transform="translate(-4.55,-3)" filter="url(#_Icon_Color-860)">
+     <rect transform="translate(1.4 .9)" width="25.2" height="25.2" fill="#242825" data-name="↳ Icon Color"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

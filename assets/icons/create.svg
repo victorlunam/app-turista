@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.5714 0 0 3.5714 -12158 11206)" data-name="Grupo 20698">
+  <path transform="translate(3407,-3135)" d="m14 0a14 14 0 1 1-14 14 14 14 0 0 1 14-14z" fill="#1b8f26" data-name="Trazado 12374"/>
+  <g id="Icon_feather-plus" transform="translate(3415.4 -3127.4)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" data-name="Icon feather-plus">
+   <path transform="translate(-12,-7.5)" d="m18 7.5v12" data-name="Trazado 401"/>
+   <path transform="translate(-7.5,-12)" d="m7.5 18h12" data-name="Trazado 402"/>
+  </g>
+ </g>
+</svg>

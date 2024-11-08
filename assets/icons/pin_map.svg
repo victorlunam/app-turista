@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="120" height="120" version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-path-2-8">
+   <path d="m5 12a0.5 0.5 0 0 1-0.277-0.084c-0.043-0.029-0.114-0.078-0.209-0.146-0.158-0.114-0.336-0.249-0.529-0.4a15.593 15.593 0 0 1-1.6-1.462 7.348 7.348 0 0 1-2.385-4.908 5 5 0 0 1 10 0 7.346 7.346 0 0 1-2.387 4.906 15.525 15.525 0 0 1-1.6 1.462c-0.177 0.141-0.355 0.276-0.529 0.4-0.112 0.081-0.181 0.128-0.207 0.145a0.5 0.5 0 0 1-0.277 0.087zm0-11a4 4 0 0 0-4 4 6.413 6.413 0 0 0 2.113 4.219 14.505 14.505 0 0 0 1.5 1.367c0.131 0.1 0.262 0.206 0.392 0.3 0.13-0.1 0.262-0.2 0.392-0.3a14.505 14.505 0 0 0 1.5-1.367 6.412 6.412 0 0 0 2.103-4.219 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2zm0-3a1 1 0 1 0 1 1 1 1 0 0 0-1-1z" fill="#fff" data-name="Combined Shape"/>
+  </clipPath>
+  <filter id="_Icon_Color-3-8" x="-61" y="-42" width="132" height="132" filterUnits="userSpaceOnUse">
+   <feOffset dy="18" input="SourceAlpha"/>
+   <feGaussianBlur result="blur" stdDeviation="20"/>
+   <feFlood flood-color="#6b67d2" flood-opacity=".349"/>
+   <feComposite in2="blur" operator="in" result="result1"/>
+   <feComposite in="SourceGraphic" in2="result1"/>
+  </filter>
+ </defs>
+ <g transform="matrix(8.3333 0 0 8.3333 18.333 10)" data-name="Grupo 92">
+  <path d="m5 12a0.5 0.5 0 0 1-0.277-0.084c-0.043-0.029-0.114-0.078-0.209-0.146-0.158-0.114-0.336-0.249-0.529-0.4a15.593 15.593 0 0 1-1.6-1.462 7.348 7.348 0 0 1-2.385-4.908 5 5 0 0 1 10 0 7.346 7.346 0 0 1-2.387 4.906 15.525 15.525 0 0 1-1.6 1.462c-0.177 0.141-0.355 0.276-0.529 0.4-0.112 0.081-0.181 0.128-0.207 0.145a0.5 0.5 0 0 1-0.277 0.087zm0-11a4 4 0 0 0-4 4 6.413 6.413 0 0 0 2.113 4.219 14.505 14.505 0 0 0 1.5 1.367c0.131 0.1 0.262 0.206 0.392 0.3 0.13-0.1 0.262-0.2 0.392-0.3a14.505 14.505 0 0 0 1.5-1.367 6.412 6.412 0 0 0 2.103-4.219 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2zm0-3a1 1 0 1 0 1 1 1 1 0 0 0-1-1z" fill="#fff" data-name="Combined Shape"/>
+  <g clip-path="url(#clip-path-2-8)" data-name="Enmascarar grupo 92">
+   <g filter="url(#_Icon_Color-3-8)">
+    <rect transform="translate(-1)" width="12" height="12" fill="#fff" data-name="↳ Icon Color"/>
+   </g>
+  </g>
+ </g>
+</svg>
